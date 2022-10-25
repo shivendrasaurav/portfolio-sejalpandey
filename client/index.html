@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="./src/assets/pokeball.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sejal Pandey</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
+<script>      
+
+  /*==============================================================*/
+
+  var final_hex;
+
+  function randomNumber(min, max) {  
+      return Math.random() * (max - min) + min; 
+  }
+  function countDigits(a){ // FUNCTION TO COUNT DIGITS (TO HANDLE SINGLE DIGITS)
+      return a.toString().length;
+  }
+
+  function randombg(id){
+      var a = randomNumber(100, 255);       //Red
+      var b = randomNumber(100, 255);       //Green
+      var c = randomNumber(100, 255);       //Blue
+
+      var sum= a+b+c;
+      var background="rgb("+ a + ", " + b + ", " + c + ")";
+
+      if(sum>=455){
+          var bglist = document.getElementById(id);
+          bglist.style.color = ("#010101")
+      }
+      else{
+          var bglist = document.getElementById(id);
+          bglist.style.color = ("#fcfcfc")
+      }
+
+      var bglist = document.getElementById(id);
+      bglist.style.backgroundColor = (background);
+  }
+  
+  window.onload = () => {
+
+    setTimeout(()=>{
+
+        let items = document.querySelectorAll(".itemWrapper");
+        let iLen = items.length;
+
+        for(let i=1; i<iLen-1; i++){
+            randombg(items[i].id);
+        }
+    }, 10)
+
+  }
+
+  /*==============================================================*/
+
+</script>
+
+<!--
+  https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png
+                          <div className="evolutions">
+                            <h3>Evolution Line</h3>
+                            {pokemonEvolution.map(evolutionLine => ( <p className="evolutionLine" key={evolutionLine}>{evolutionLine}</p> ))}
+                        </div>
+
+-->
