@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Monoton&display=swap");
 .sectionWrapper {
-  background: #000;
+  background: #0e0e0e;
   height: 100vh;
   overflow-y: hidden;
   overflow-x: scroll;
@@ -92,14 +92,7 @@
   line-height: 0.6;
 }
 .sectionWrapper .horizontalFrame .contactus {
-  background: radial-gradient(cyan, pink, yellow, green);
-  background-size: 400%;
-  background-position: top left;
-  -webkit-background-clip: text;
-          background-clip: text;
-  color: transparent;
-  -webkit-animation: coverAnim 20s linear infinite;
-          animation: coverAnim 20s linear infinite;
+  background-color: #0e0e0e;
 }
 .sectionWrapper .horizontalFrame .contactus .item {
   transform: none;
@@ -107,6 +100,9 @@
 .sectionWrapper .horizontalFrame .contactus .item a {
   background: #fafafa;
   color: #0e0e0e;
+}
+.sectionWrapper .horizontalFrame .contactus .item h1, .sectionWrapper .horizontalFrame .contactus .item h2 {
+  color: #fafafa;
 }
 .sectionWrapper .horizontalFrame .contactus .item .socials a {
   background: transparent;

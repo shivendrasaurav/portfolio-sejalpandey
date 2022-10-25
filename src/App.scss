@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Monoton&display=swap');
 
 .sectionWrapper{
-    background: #000;
+    background: #0e0e0e;
     height: 100vh;
     overflow-y: hidden;
     overflow-x: scroll;
@@ -103,12 +103,7 @@
         }
 
         .contactus{
-            background: radial-gradient(cyan, pink, yellow, green);
-            background-size: 400%;
-            background-position: top left;
-            background-clip: text;
-            color: transparent;
-            animation: coverAnim 20s linear infinite;
+            background-color: #0e0e0e;
 
             .item{
                 transform: none;
@@ -116,6 +111,9 @@
                 a{
                     background: #fafafa;
                     color: #0e0e0e;
+                }
+                h1, h2{
+                    color: #fafafa;
                 }
 
                 .socials{

@@ -3,6 +3,62 @@ import projects from "../api/AllData.json";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const Index = () =>{
+    
+    /*==============================================================*/
+
+    var final_hex;
+
+    function randomNumber(min, max) {  
+        return Math.random() * (max - min) + min; 
+    }
+
+    function randombg(id){
+        var a = randomNumber(100, 255);       //Red
+        var b = randomNumber(100, 255);       //Green
+        var c = randomNumber(100, 255);       //Blue
+    
+        var sum= a+b+c;
+        var background="rgb("+ a + ", " + b + ", " + c + ")";
+    
+        if(sum>=455){
+            var bglist = document.getElementById(id);
+            bglist.style.color = ("#010101")
+        }
+        else{
+            var bglist = document.getElementById(id);
+            bglist.style.color = ("#fcfcfc")
+        }
+    
+        var bglist = document.getElementById(id);
+        bglist.style.backgroundColor = (background);
+    }
+    
+    const rbcg = () => {
+    
+            let items = document.querySelectorAll(".itemPortrait");
+            let iLen = items.length;
+    
+            for(let i=0; i<iLen-1; i++){
+                var a = randomNumber(125, 255);       //Red
+                var b = randomNumber(125, 255);       //Green
+                var c = randomNumber(125, 255);       //Blue
+            
+                var sum= a+b+c;
+                var bg="rgb("+ a + ", " + b + ", " + c + ")";
+            
+                if(sum>=455){
+                    items[i].style.color = ("#010101")
+                }
+                else{
+                    items[i].color = ("#fcfcfc")
+                }
+            
+                items[i].style.backgroundColor = bg;
+            }
+    
+      }
+    
+    /*==============================================================*/
 
     const [HFWidth, setHFWidth] = useState(0);
 
@@ -64,6 +120,7 @@ const Index = () =>{
 
     useEffect(()=>{
         calcFrameWidth();
+        rbcg();
     }, [])
 
 
@@ -86,7 +143,7 @@ const Index = () =>{
 
                     {projects.map(
                         project => (
-                            <div className={"itemWrapper " + project.class} key={project.title} id={project.rel}>
+                            <div className={"itemWrapper " + project.class} key={project.title}>
                                 <div className="item">
                                     <h1>{project.type}</h1>
                                     <h2>{project.title}</h2>
