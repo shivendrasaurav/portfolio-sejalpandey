@@ -11,41 +11,40 @@
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
-<script>      
+<script>
+      /*==============================================================*/
 
-  /*==============================================================*/
+      var final_hex;
 
-  var final_hex;
+function randomNumber(min, max) {  
+    return Math.random() * (max - min) + min; 
+}
+function countDigits(a){ // FUNCTION TO COUNT DIGITS (TO HANDLE SINGLE DIGITS)
+    return a.toString().length;
+}
 
-  function randomNumber(min, max) {  
-      return Math.random() * (max - min) + min; 
-  }
-  function countDigits(a){ // FUNCTION TO COUNT DIGITS (TO HANDLE SINGLE DIGITS)
-      return a.toString().length;
-  }
+function randombg(id){
+    var a = randomNumber(100, 255);       //Red
+    var b = randomNumber(100, 255);       //Green
+    var c = randomNumber(100, 255);       //Blue
 
-  function randombg(id){
-      var a = randomNumber(100, 255);       //Red
-      var b = randomNumber(100, 255);       //Green
-      var c = randomNumber(100, 255);       //Blue
+    var sum= a+b+c;
+    var background="rgb("+ a + ", " + b + ", " + c + ")";
 
-      var sum= a+b+c;
-      var background="rgb("+ a + ", " + b + ", " + c + ")";
+    if(sum>=455){
+        var bglist = document.getElementById(id);
+        bglist.style.color = ("#010101")
+    }
+    else{
+        var bglist = document.getElementById(id);
+        bglist.style.color = ("#fcfcfc")
+    }
 
-      if(sum>=455){
-          var bglist = document.getElementById(id);
-          bglist.style.color = ("#010101")
-      }
-      else{
-          var bglist = document.getElementById(id);
-          bglist.style.color = ("#fcfcfc")
-      }
+    var bglist = document.getElementById(id);
+    bglist.style.backgroundColor = (background);
+}
 
-      var bglist = document.getElementById(id);
-      bglist.style.backgroundColor = (background);
-  }
-  
-  window.onload = () => {
+window.onload = () => {
 
     setTimeout(()=>{
 
@@ -55,14 +54,12 @@
         for(let i=1; i<iLen-1; i++){
             randombg(items[i].id);
         }
-    }, 10)
+    }, 100)
 
   }
 
-  /*==============================================================*/
-
+/*==============================================================*/
 </script>
-
 <!--
   https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png
                           <div className="evolutions">
