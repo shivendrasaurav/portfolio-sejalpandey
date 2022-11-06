@@ -159,8 +159,8 @@ const Index = () =>{
                             <h2>Get in Touch</h2>
                             <a href="mailto:sejalpandey0901@gmail.com" target="_blank" referrer="no-referrer">Drop an Email</a>
                             <div className="socials">
-                                <a href="https://www.instagram.com/sejal_pandey_09/" target="_blank"><i className="fab fa-linkedin"></i></a>
-                                <a href="https://www.linkedin.com/in/sejal-pandey-b872271b1/" target="_blank"><i className="fab fa-instagram"></i></a>
+                                <a href="https://www.instagram.com/sejal_pandey_09/" target="_blank"><i className="fab fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/sejal-pandey-b872271b1/" target="_blank"><i className="fab fa-linkedin"></i></a>
                             </div>
                         </div>
                     </div>
