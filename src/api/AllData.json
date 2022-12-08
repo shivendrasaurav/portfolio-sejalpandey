@@ -1,44 +1,58 @@
 [
     {
-        "title": "My choice, or is it?",
-        "type": "Script Writing",
+        "title": "Fluent Design For Web",
+        "type": "CSS Framework",
         "class": "itemPortrait",
-        "rel": "https://www.instagram.com/tv/CEED0eWpcs6/"
+        "rel": "https://fluentdesignforweb.github.io/v2/",
+        "ghrel": "https://github.com/fluentdesignforweb",
+        "img": "./logos/fdweb.png"
     },
     {
-        "title": "The silver lining on red light",
-        "type": "Article",
+        "title": "The Code Drop",
+        "type": "Youtube Channel",
         "class": "itemPortrait",
-        "rel": "https://publicpolicyindia.com/2022/05/11/the-silver-lining-on-red-light/"
+        "rel": "https://www.youtube.com/c/thecodedrop",
+        "ghrel": "https://github.com/shivendrasaurav/The-Code-Drop-Box-React",
+        "img": "./logos/tcdb.png"
     },
     {
-        "title": "The bell jar-sylvia plath ( book review)",
-        "type": "Article",
+        "title": "Corona Rakshak",
+        "type": "Progressive Web App",
         "class": "itemPortrait",
-        "rel": "https://policycentreandgenderlab.blogspot.com/2021/02/the-bell-jar-sylvia-plath-book-review.html"
+        "rel": "https://shivendrasaurav.github.io/corona-rakshak/",
+        "ghrel": "https://github.com/shivendrasaurav/corona-rakshak",
+        "img": "./logos/cr.png"
     },
     {
-        "title": "Dating: then vs now",
-        "type": "Script Writing",
+        "title": "REVA Hack 2020 </> App",
+        "type": "Web App",
         "class": "itemPortrait",
-        "rel": "https://www.youtube.com/watch?v=6HOjVWJDQPw"
+        "rel": "https://revahack.com/#/",
+        "ghrel": "https://github.com/revahack",
+        "img": "./logos/rh.png"
     },
     {
-        "title": "Too much pressure on women to have a “perfect body”",
-        "type": "Article",
+        "title": "Rukku's Coffee",
+        "type": "Coffee Store",
         "class": "itemPortrait",
-        "rel": "https://www.sociologygroup.com/too-much-pressure-on-women-to-have-a-perfect-body/"
+        "rel": "nolink",
+        "ghrel": "https://github.com/makeinbharat/",
+        "img": "./logos/rc.png"
     },
     {
-        "title": "Introduction to social psychology: an overview",
-        "type": "Article",
+        "title": "IJLE",
+        "type": "Web Journal",
         "class": "itemPortrait",
-        "rel": "https://www.sociologygroup.com/social-psychology/"
+        "rel": "http://ijle.org/",
+        "ghrel": "https://github.com/makeinbharat/",
+        "img": "./logos/ijle.png"
     },
     {
-        "title": "Recognition of household work as paid work",
-        "type": "Article",
+        "title": "Hisab Kitab",
+        "type": "Android App",
         "class": "itemPortrait",
-        "rel": "https://lighthousemh.wordpress.com/2021/04/21/recognition-of-household-work-as-paid-work/"
+        "rel": "https://github.com/makeinbharat/hisabkitab_native",
+        "ghrel": "https://github.com/makeinbharat/",
+        "img": "./logos/hk.png"
     }
 ]

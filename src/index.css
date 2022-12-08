@@ -6,6 +6,17 @@
   scroll-snap-align: start;
   box-sizing: border-box;
 }
+
+
 ::-webkit-scrollbar{
-  display: none;
+  background-color: #dacffa;
+}
+::-webkit-scrollbar-thumb{
+  background-color: #00caca;
+  border-radius: 16px;
+}
+@media (min-width: 280px) and (max-width: 639px) {
+  ::-webkit-scrollbar{
+   display: none;
+  }
 }
