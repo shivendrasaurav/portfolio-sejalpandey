@@ -35,7 +35,7 @@
         "title": "Rukku's Coffee",
         "type": "Coffee Store",
         "class": "itemPortrait",
-        "rel": "nolink",
+        "rel": "https://www.rukkuscoffee.com/",
         "ghrel": "https://github.com/makeinbharat/",
         "img": "./logos/rc.png"
     },
