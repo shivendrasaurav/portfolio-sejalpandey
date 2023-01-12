@@ -40,12 +40,12 @@
         "img": "./logos/rc.png"
     },
     {
-        "title": "IJLE",
-        "type": "Web Journal",
+        "title": "PokeDex",
+        "type": "Flutter App",
         "class": "itemPortrait",
-        "rel": "http://ijle.org/",
-        "ghrel": "https://github.com/makeinbharat/",
-        "img": "./logos/ijle.png"
+        "rel": "https://github.com/fluentdesignweb/PokeDex/releases/tag/v0.0.1-alpha",
+        "ghrel": "https://github.com/fluentdesignweb/PokeDex",
+        "img": "./logos/pokeball.png"
     },
     {
         "title": "Hisab Kitab",
