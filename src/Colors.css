@@ -1,0 +1,20 @@
+.frostInverted {
+  background-color: rgba(30, 30, 30, 0.6666666667);
+  color: #ffffff;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+.navbarOrange {
+  background-color: #ff8800;
+  color: #ffffff;
+}
+
+.skillColor {
+  background-color: #dadada;
+}
+
+.statColor {
+  background-color: #ff0055;
+  color: #fafafa;
+}/*# sourceMappingURL=Colors.css.map */

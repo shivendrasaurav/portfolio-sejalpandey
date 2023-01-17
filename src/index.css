@@ -9,14 +9,18 @@
 
 
 ::-webkit-scrollbar{
-  background-color: #dacffa;
+  background-color: #acacac44;
 }
 ::-webkit-scrollbar-thumb{
-  background-color: #00caca;
-  border-radius: 16px;
+  background-color: #0e0e0eaa;
+  border-radius: 8px;
 }
 @media (min-width: 280px) and (max-width: 639px) {
   ::-webkit-scrollbar{
    display: none;
   }
+}
+
+#root{
+  transition: 400ms;
 }

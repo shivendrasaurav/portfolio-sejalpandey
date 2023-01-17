@@ -3,8 +3,9 @@ import {BrowserRouter as Router, Route, Routes, Navigate} from 'react-router-dom
 import 'fdweb/fluent-core.css';
 import 'fdweb/fluent-icons.css';
 import './App.css';
+import './Colors.css';
 
-import Index from "./routes/index.jsx";
+import Index from "./routes/home/index.jsx";
 
 const App = () => {
   return(

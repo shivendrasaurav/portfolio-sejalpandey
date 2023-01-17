@@ -1,0 +1,42 @@
+[
+    {
+        "title": "Figma",
+        "info": "Figma is a Free, Online Design Tool which can be used to create beautiful user interfaces with our UI design tool. Collaborate on creations, build prototypes & create seamless workflows all-in-one. Get started today.",
+        "iconrow" : ["./assets/stacks/figma.png"]
+    },
+    {
+        "title": "Balsamiq",
+        "info": "Balsamiq Wireframes is a rapid low-fidelity UI wireframing tool that reproduces the experience of sketching on a notepad or whiteboard, but using a computer.",
+        "iconrow" : ["./assets/stacks/balsamiq.png"]
+    },
+    {
+        "title": "Jamstack",
+        "info": "Jamstack is an architectural approach that decouples the web experience layer from data and business logic, improving flexibility, scalability, performance, and maintainability. At it's core Jamstack uses Javascript for frontend, backend and apis.",
+        "iconrow" : ["./assets/stacks/jamstack.png"]
+    },
+    {
+        "title": "PERN",
+        "info": "PERN is a robust, persistant and SQL database based development stack which uses PostgreSQL as it's database, Express JS as api layer, React as front end ui and Node JS as the backend. PostgreSQL can be replaced with any other SQL database without introducing any new issues.",
+        "iconrow" : ["./assets/stacks/postgresql.png", "./assets/stacks/express.png", "./assets/stacks/react.png", "./assets/stacks/nodejs.png"]
+    },
+    {
+        "title": "MERN",
+        "info": "MERN is a innovative, secure and No SQL database based development stack which uses Mongo DB as it's database, Express JS as api layer, React as front end ui and Node JS as the backend. Mongo DB can be replaced with any other No SQL database without introducing any new issues.",
+        "iconrow" : ["./assets/stacks/mongo.png", "./assets/stacks/express.png", "./assets/stacks/react.png", "./assets/stacks/nodejs.png"]
+    },
+    {
+        "title": "Flutter",
+        "info": "Flutter is an open source framework by Google for building beautiful, natively compiled, multi-platform applications from a single codebase. It can be used to create apps for any platform wether it's Windows, Android, iOS or The Web.",
+        "iconrow" : ["./assets/stacks/flutter.png"]
+    },
+    {
+        "title": "MDR",
+        "info": "MDR stands for MySQL, Django and React. It uses a relational based SQL database with a python based backend and api layer both of which are know for their security and great tooling, combined with the most popular frontend framework to create on of the best stacks for development.",
+        "iconrow" : ["./assets/stacks/mysql.png", "./assets/stacks/django.png", "./assets/stacks/react.png"]
+    },
+    {
+        "title": "FDWeb",
+        "info": "Fluent Design for Web is a free, cross-platform CSS framework that is simple to use and extremely adaptable. It enables developers to create more accessible and engaging user interfaces for users.",
+        "iconrow" : ["./assets/stacks/fdweb.png"]
+    }
+]

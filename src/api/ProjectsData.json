@@ -1,0 +1,74 @@
+[
+    {
+        "title": "Fluent Design For Web",
+        "type": "CSS Framework",
+        "class": "itemPortrait",
+        "rel": "https://fluentdesignforweb.github.io/v2/",
+        "ghrel": "https://github.com/fluentdesignforweb",
+        "img": "./logos/fdweb.png",
+        "tags": "tool - development - design"
+    },
+    {
+        "title": "The Code Drop",
+        "type": "Youtube Channel",
+        "class": "itemPortrait",
+        "rel": "https://www.youtube.com/c/thecodedrop",
+        "ghrel": "https://github.com/shivendrasaurav/The-Code-Drop-Box-React",
+        "img": "./logos/tcdb.png",
+        "tags": "content - eSports"
+    },
+    {
+        "title": "PokeDex",
+        "type": "Flutter App",
+        "class": "itemPortrait",
+        "rel": "https://github.com/fluentdesignweb/PokeDex/releases/tag/v0.0.1-alpha",
+        "ghrel": "https://github.com/fluentdesignweb/PokeDex",
+        "img": "./logos/pokeball.png",
+        "tags": "android app - development - design"
+    },
+    {
+        "title": "Rukku's Coffee",
+        "type": "Coffee Store",
+        "class": "itemPortrait",
+        "rel": "https://www.rukkuscoffee.com/",
+        "ghrel": "https://github.com/makeinbharat/",
+        "img": "./logos/rc.png",
+        "tags": "website - development - design"
+    },
+    {
+        "title": "Sejal Pandey",
+        "type": "Portfolio",
+        "class": "itemPortrait",
+        "rel": "https://sejalpandey.vercel.app/",
+        "ghrel": "https://github.com/makeinbharat/",
+        "img": "./logos/sp.png",
+        "tags": "portfolio - development - design"
+    },
+    {
+        "title": "Corona Rakshak",
+        "type": "Progressive Web App",
+        "class": "itemPortrait",
+        "rel": "https://shivendrasaurav.github.io/corona-rakshak/",
+        "ghrel": "https://github.com/shivendrasaurav/corona-rakshak",
+        "img": "./logos/cr.png",
+        "tags": "pwa - development - design"
+    },
+    {
+        "title": "REVA Hack 2020 </> App",
+        "type": "Web App",
+        "class": "itemPortrait",
+        "rel": "https://revahack.com/#/",
+        "ghrel": "https://github.com/revahack",
+        "img": "./logos/rh.png",
+        "tags": "pwa - development - design"
+    },
+    {
+        "title": "Hisab Kitab",
+        "type": "Android App",
+        "class": "itemPortrait",
+        "rel": "https://github.com/makeinbharat/hisabkitab_native",
+        "ghrel": "https://github.com/makeinbharat/",
+        "img": "./logos/hk.png",
+        "tags": "android app - development - design"
+    }
+]
