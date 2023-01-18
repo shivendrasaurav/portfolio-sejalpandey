@@ -7,8 +7,6 @@ import Contact from "./contact";
 
 const Index = () =>{
 
-
-
     return(
         <Fragment>
 

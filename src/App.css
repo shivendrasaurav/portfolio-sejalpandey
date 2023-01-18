@@ -1,25 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap");
 #hero {
-  height: 100vh;
   width: 100%;
   background: transparent;
-  overflow: hidden;
-}
-#hero::before {
-  content: " ";
-  height: 100vh;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  background: radial-gradient(circle at bottom right, rgba(44, 114, 255, 0.6666666667), transparent), radial-gradient(circle at bottom left, rgba(218, 218, 186, 0.6666666667), transparent), radial-gradient(circle at top right, rgba(255, 0, 149, 0.6666666667), transparent), radial-gradient(circle at top left, rgba(10, 207, 221, 0.6666666667), transparent);
 }
 #hero .wrapper {
-  -webkit-backdrop-filter: blur(10px) saturate(120%);
-          backdrop-filter: blur(10px) saturate(120%);
-  height: 100vh;
   width: 100%;
+  overflow-x: hidden;
+  background: radial-gradient(circle at bottom right, rgba(44, 114, 255, 0.6666666667), transparent), radial-gradient(circle at bottom left, rgba(218, 218, 186, 0.6666666667), transparent), radial-gradient(circle at top right, rgba(255, 0, 149, 0.6666666667), transparent), radial-gradient(circle at top left, rgba(10, 207, 221, 0.6666666667), transparent);
 }
 #hero .flexCenter {
   height: 100vh;
@@ -57,7 +44,7 @@
   -o-object-fit: cover;
      object-fit: cover;
   aspect-ratio: 1.02;
-  border-radius: 6px;
+  border-radius: 12px;
   width: 90%;
 }
 
@@ -78,17 +65,21 @@
   margin: 0 32px;
   font-family: "Montserrat";
 }
+#navigation .pivot_menu .onlyPhone {
+  display: none;
+}
+#navigation .pivot_menu .notPhone {
+  display: block;
+}
 
 #stacks {
-  height: 90vh;
   width: 100%;
   background: transparent;
-  overflow: hidden;
 }
 #stacks .wrapper {
-  height: 90vh;
   width: 100%;
-  background-color: #fcfcfc;
+  overflow-x: hidden;
+  background: #eaeaea;
 }
 #stacks .flexCenter {
   height: 90vh;
@@ -116,6 +107,43 @@
   width: 80%;
   text-align: justify;
   font-family: "Montserrat";
+}
+#stacks .projectSlides {
+  width: 90vw;
+  height: 60vh;
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+#stacks .projectSlides .itemWrapper {
+  width: 360px;
+  height: 360px;
+  aspect-ratio: 1;
+  margin: 0 60px 0 0;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 12px;
+}
+#stacks .projectSlides .itemWrapper .projectTitle {
+  font-size: 18px;
+  font-family: "Montserrat";
+}
+#stacks .projectSlides .itemWrapper .projectTags {
+  font-size: 14px;
+  font-family: "Montserrat";
+  text-align: justify;
+}
+#stacks .projectSlides .itemWrapper .iconRow {
+  width: 100%;
+  padding: 10px 0px;
+}
+#stacks .projectSlides .itemWrapper .iconRow .stackIcon {
+  width: 60px;
+  border-radius: 12px;
+  border: 2px solid black;
+  margin: 0 10px 0 0;
 }
 #stacks .stackBtns {
   width: 100%;
@@ -147,15 +175,13 @@
 }
 
 #projects {
-  height: 90vh;
   width: 100%;
   background: transparent;
-  overflow: hidden;
 }
 #projects .wrapper {
-  height: 90vh;
   width: 100%;
-  background: #faccfa;
+  background: #eaeaea;
+  overflow-x: hidden;
 }
 #projects .flexCenter {
   height: 90vh;
@@ -184,7 +210,7 @@
 }
 #projects .projectSlides .itemWrapper img {
   width: 80%;
-  border-radius: 6px;
+  border-radius: 12px;
 }
 #projects .projectSlides .itemWrapper .projectTitle {
   font-size: 14px;
@@ -203,15 +229,13 @@
 }
 
 #contact {
-  height: 100vh;
   width: 100%;
   background: transparent;
-  overflow: hidden;
 }
 #contact .wrapper {
-  height: 100vh;
   width: 100%;
-  background: radial-gradient(circle at top left, rgba(250, 204, 250, 0.6666666667), transparent), radial-gradient(circle at bottom right, rgba(0, 250, 202, 0.6666666667), transparent);
+  overflow-x: hidden;
+  background: radial-gradient(circle at bottom right, rgba(44, 114, 255, 0.6666666667), transparent), radial-gradient(circle at bottom left, rgba(255, 255, 190, 0.6666666667), transparent), radial-gradient(circle at top right, rgba(255, 0, 149, 0.6666666667), transparent), radial-gradient(circle at top left, rgba(27, 240, 255, 0.6666666667), transparent);
 }
 #contact .flexCenter {
   height: 100vh;
@@ -227,29 +251,6 @@
   vertical-align: top;
   padding: 0 5%;
 }
-#contact .projectSlides {
-  width: 90vw;
-  height: 60vh;
-  display: flex;
-  overflow-x: scroll;
-  overflow-y: hidden;
-}
-#contact .projectSlides .itemWrapper {
-  width: 480px;
-  aspect-ratio: 1;
-}
-#contact .projectSlides .itemWrapper img {
-  width: 80%;
-  border-radius: 6px;
-}
-#contact .projectSlides .itemWrapper .projectTitle {
-  font-size: 14px;
-  font-family: "Montserrat";
-}
-#contact .projectSlides .itemWrapper .projectTags {
-  font-size: 12px;
-  font-family: "Montserrat";
-}
 #contact .title {
   width: 70%;
   font-family: "Montserrat";
@@ -263,19 +264,6 @@
   font-family: "Montserrat";
   text-align: justify;
 }
-#contact .mailBtn {
-  background-color: #fafafa;
-  padding: 4px 12px;
-  border-radius: 6px;
-  font-size: 12px;
-  color: #0e0e0e;
-  font-family: "Montserrat";
-  font-weight: normal;
-}
-#contact .mailBtn:hover {
-  background-color: #326fff;
-  color: #eaeaea;
-}
 #contact .label {
   width: 70%;
   font-size: 12px;
@@ -285,11 +273,91 @@
 #contact .socials a {
   background: #fafafa;
   color: #0e0e0e;
-  margin: 24px 16px 0 0;
-  padding: 8px 12px;
+  margin: 8px 16px 0 0;
+  padding: 4px 12px;
   border-radius: 6px;
+  display: inline-block;
 }
 #contact .socials a:hover {
   background-color: #326fff;
   color: #eaeaea;
+}
+#contact .socials .mailBtn {
+  background-color: #fafafa;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  color: #0e0e0e;
+  font-family: "Montserrat";
+  font-weight: normal;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+#contact .socials .mailBtn:hover {
+  background-color: #326fff;
+  color: #eaeaea;
+}
+
+#hero, #stacks, #projects, #contact {
+  overflow-y: hidden;
+}
+
+@media (min-width: 280px) and (max-width: 639px) {
+  #navigation .pivot_menu .onlyPhone {
+    display: block;
+  }
+  #navigation .pivot_menu .notPhone {
+    display: none;
+  }
+  #hero .wrapper .flexCenter, #stacks .wrapper .flexCenter, #projects .wrapper .flexCenter, #contact .wrapper .flexCenter {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  #hero .wrapper .flexCenterVert, #stacks .wrapper .flexCenterVert, #projects .wrapper .flexCenterVert, #contact .wrapper .flexCenterVert {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 5%;
+  }
+  #hero .wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  #hero .wrapper .flexCenter .jumbotron {
+    font-size: 6vh;
+    width: 90%;
+    margin: 32px auto;
+    text-align: center;
+  }
+  #hero .wrapper .flexCenter .small12 .subTitle, #hero .wrapper .flexCenter .small12 .label {
+    width: 100%;
+    text-align: center;
+  }
+  #hero .wrapper .flexCenter .small12 .fullCrop {
+    margin: 20px auto;
+    width: 80%;
+    display: block;
+  }
+  #stacks .wrapper .flexCenter, #projects .wrapper .flexCenter {
+    height: 80vh;
+  }
+  #contact .wrapper {
+    height: 200vh;
+  }
+  #contact .socials, #contact .title, #contact .label {
+    width: 80%;
+  }
+  #contact .socials .mailBtn, #contact .title .mailBtn, #contact .label .mailBtn {
+    display: block;
+  }
+  #navigation .pivot_menu {
+    padding: 6px 0px;
+  }
+  #navigation .pivot_menu .pivot_button {
+    margin: 0px 12px;
+  }
 }/*# sourceMappingURL=App.css.map */

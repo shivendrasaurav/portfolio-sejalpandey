@@ -25,9 +25,9 @@ const Projects = () =>{
                         <div className="projectSlides" id="xScroll">
                             {projects.map(
                                 project => (
-                                    <div className={"itemWrapper " + project.class} key={project.title}>
+                                    <div className={"itemWrapper"} key={project.title}>
                                         <a href={project.rel} target="_blank" referrer="no-referrer">
-                                            <img className="thumbnail" src={project.img} alt={project.title} />
+                                            <img className="thumbnail dlevel2" src={project.img} alt={project.title} />
                                         </a>
                                         <p className="projectTile">{project.title}</p>
                                         <p className="projectTags">{project.tags}</p>

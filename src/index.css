@@ -1,4 +1,4 @@
-*, .page_comtainer{
+*, .page_container{
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
@@ -7,18 +7,13 @@
   box-sizing: border-box;
 }
 
-
 ::-webkit-scrollbar{
   background-color: #acacac44;
 }
+
 ::-webkit-scrollbar-thumb{
   background-color: #0e0e0eaa;
   border-radius: 8px;
-}
-@media (min-width: 280px) and (max-width: 639px) {
-  ::-webkit-scrollbar{
-   display: none;
-  }
 }
 
 #root{

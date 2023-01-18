@@ -3,45 +3,73 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import stackData from "../../api/StackData.json";
 
 const Stacks = () =>{
+    /*==============================================================*/
 
-    let stacks = stackData;
-
-    const [stackTitle, setStackTitle] = useState(stackData[0].title);
-    const [stackInfo, setStackInfo] = useState(stackData[0].info);
-    const [stackIcons, setStackIcons] = useState(stackData[0].iconrow);
-
-    const setStackData = (index) =>{
-        setStackTitle(stacks[index].title);
-        setStackInfo(stacks[index].info);
-        setStackIcons(stacks[index].iconrow);
+    function randomNumber(min, max) {  
+        return Math.random() * (max - min) + min; 
     }
+    
+    const rbcg = () => {
+    
+            let items = document.querySelectorAll(".itemPortrait");
+            let iLen = items.length;
+    
+            for(let i=0; i<iLen; i++){
+                var a = randomNumber(155, 255);       //Red
+                var b = randomNumber(155, 255);       //Green
+                var c = randomNumber(155, 255);       //Blue
+            
+                var sum= a+b+c;
+                var bg="rgb("+ a + ", " + b + ", " + c + ")";
+            
+                if(sum>=455){
+                    items[i].style.color = ("#010101")
+                }
+                else{
+                    items[i].color = ("#fcfcfc")
+                }
+            
+                items[i].style.backgroundColor = bg;
+            }
+    
+      }
+    
+    /*==============================================================*/
+    
+    let stacks = stackData;
+    
+    useEffect(()=>{
+        rbcg();
 
+        let slider = document.getElementById("stackScroll");
+        slider.addEventListener('wheel', (e =>{
+            e.preventDefault();
+            let x = e.deltaY;
+            slider.scrollBy(x, 0);
+        }))
+    }, [])
 
     return(
         <Fragment>
 
             <div id="stacks">
                 <div className="wrapper columns large12 medium12 small12">
-                    <div className="flexCenter flexCenterVert lg-5 md-6 sm-9 primary_red">
-                        <h1 className="title">Stacks and Toolsets</h1>
-                        <div className="stackBtns">
-                            <button onClick={() => setStackData(0)}>Figma</button>
-                            <button onClick={() => setStackData(1)}>Balasmiq</button>
-                            <button onClick={() => setStackData(2)}>Jamstack</button>
-                            <button onClick={() => setStackData(3)}>PERN</button>
-                            <button onClick={() => setStackData(4)}>MERN</button>
-                            <button onClick={() => setStackData(5)}>Flutter</button>
-                            <button onClick={() => setStackData(6)}>MDR</button>
-                            <button onClick={() => setStackData(7)}>FDWeb</button>
-                        </div>
-                    </div>
-                    <div className="flexCenter flexCenterVert lg-4 md-4 sm-9 primary_white right">
-                        <h1 id="stackTitle" className="title" style={{borderBottom: '4px solid red'}}>{stackTitle}</h1>
-                        <p id="stackInfo" className="info">{stackInfo}</p>
-                        <div id="stackIcons" className="iconRow">
-                            {stackIcons.map(
-                                icon => (
-                                    <img key={icon} src={icon} className="stackIcon" alt={stackTitle} />
+                    <div className="flexCenter flexCenterVert">
+                        <h1 className="title">The tools and stacks I use</h1>
+                        <div className="projectSlides" id="stackScroll">
+                            {stacks.map(
+                                stack => (
+                                    <div className={"itemWrapper itemPortrait dlevel2"} key={stack.title}>
+                                        <p className="projectTitle">{stack.title}</p>
+                                        <p className="projectTags">{stack.info}</p>
+                                        <div className="iconRow">
+                                            {stack.iconrow.map(
+                                                icon => (
+                                                    <img key={icon} src={icon} className="stackIcon" alt={stack.title} />
+                                                )
+                                            )}
+                                        </div>
+                                   </div>
                                 )
                             )}
                         </div>

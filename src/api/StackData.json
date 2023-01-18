@@ -10,9 +10,9 @@
         "iconrow" : ["./assets/stacks/balsamiq.png"]
     },
     {
-        "title": "Jamstack",
-        "info": "Jamstack is an architectural approach that decouples the web experience layer from data and business logic, improving flexibility, scalability, performance, and maintainability. At it's core Jamstack uses Javascript for frontend, backend and apis.",
-        "iconrow" : ["./assets/stacks/jamstack.png"]
+        "title": "FDWeb",
+        "info": "Fluent Design for Web is a free, cross-platform CSS framework that is simple to use and extremely adaptable. It enables developers to create more accessible and engaging user interfaces for users.",
+        "iconrow" : ["./assets/stacks/fdweb.png"]
     },
     {
         "title": "PERN",
@@ -35,8 +35,8 @@
         "iconrow" : ["./assets/stacks/mysql.png", "./assets/stacks/django.png", "./assets/stacks/react.png"]
     },
     {
-        "title": "FDWeb",
-        "info": "Fluent Design for Web is a free, cross-platform CSS framework that is simple to use and extremely adaptable. It enables developers to create more accessible and engaging user interfaces for users.",
-        "iconrow" : ["./assets/stacks/fdweb.png"]
+        "title": "Jamstack",
+        "info": "Jamstack is an architectural approach that decouples the web experience layer from data and business logic, improving flexibility, scalability, performance, and maintainability. At it's core Jamstack uses Javascript for frontend, backend and apis.",
+        "iconrow" : ["./assets/stacks/jamstack.png"]
     }
 ]

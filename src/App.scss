@@ -1,29 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap');
 
 #hero{
-    height: 100vh;
     width: 100%;
     background: transparent;
-    overflow: hidden;
 
-    &::before{
-        content: ' ';
-        height: 100vh;
+    .wrapper{
         width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
+        overflow-x: hidden;
         background: radial-gradient(circle at bottom right, #2c72ffaa, transparent),
                     radial-gradient(circle at bottom left, #dadabaaa, transparent),
                     radial-gradient(circle at top right, #ff0095aa, transparent),
                     radial-gradient(circle at top left, #0acfddaa, transparent);
-    }
-
-    .wrapper{
-        backdrop-filter: blur(10px) saturate(120%);
-        height: 100vh;
-        width: 100%;
     }
     .flexCenter{
         height: 100vh;
@@ -60,7 +47,7 @@
     .fullCrop{
         object-fit: cover;
         aspect-ratio: 1.02;
-        border-radius: 6px;
+        border-radius: 12px;
         width: 90%;
     }
 }
@@ -81,19 +68,23 @@
             margin: 0 32px;
             font-family: 'Montserrat';
         }
+        .onlyPhone{
+            display: none;
+        }
+        .notPhone{
+            display: block;
+        }
     }
 }
 
 #stacks{
-    height: 90vh;
     width: 100%;
     background: transparent;
-    overflow: hidden;
     
     .wrapper{
-        height: 90vh;
         width: 100%;
-        background-color: #fcfcfc;
+        overflow-x: hidden;
+        background: #eaeaea;
     }
     .flexCenter{
         height: 90vh;
@@ -121,6 +112,46 @@
         width: 80%;
         text-align: justify;
         font-family:  'Montserrat';
+    }
+    .projectSlides{
+        width: 90vw;
+        height: 60vh;
+        display: flex;
+        overflow-x: scroll;
+        overflow-y: hidden;
+
+        .itemWrapper{
+            width: 360px;
+            height: 360px;
+            aspect-ratio: 1;
+            margin: 0 60px 0 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            border-radius: 12px;
+            
+            .projectTitle{
+                font-size: 18px;
+                font-family: 'Montserrat';
+            }
+            .projectTags{
+                font-size: 14px;
+                font-family: 'Montserrat';
+                text-align: justify;
+            }
+            .iconRow{
+                width: 100%;
+                padding: 10px 0px;
+
+                .stackIcon{
+                    width: 60px;
+                    border-radius: 12px;
+                    border: 2px solid black;
+                    margin: 0 10px 0 0;
+                }
+            }
+        }
     }
     .stackBtns{
         width: 100%;
@@ -157,15 +188,13 @@
 }
 
 #projects{
-    height: 90vh;
     width: 100%;
     background: transparent;
-    overflow: hidden;
 
     .wrapper{
-        height: 90vh;
         width: 100%;
-        background: #faccfa;
+        background: #eaeaea;
+        overflow-x: hidden;
     }
     .flexCenter{
         height: 90vh;
@@ -194,7 +223,7 @@
 
             img{
                 width: 80%;
-                border-radius: 6px;
+                border-radius: 12px;
             }
             .projectTitle{
                 font-size: 14px;
@@ -216,16 +245,16 @@
 }
 
 #contact{
-    height: 100vh;
     width: 100%;
     background: transparent;
-    overflow: hidden;
 
     .wrapper{
-        height: 100vh;
         width: 100%;
-        background: radial-gradient(circle at top left, #faccfaaa, transparent),
-                    radial-gradient(circle at bottom right, #00facaaa, transparent);
+        overflow-x: hidden;
+        background: radial-gradient(circle at bottom right, #2c72ffaa, transparent),
+                    radial-gradient(circle at bottom left, #ffffbeaa, transparent),
+                    radial-gradient(circle at top right, #ff0095aa, transparent),
+                    radial-gradient(circle at top left, #1bf0ffaa, transparent);
     }
     .flexCenter{
         height: 100vh;
@@ -241,31 +270,6 @@
         vertical-align: top;
         padding: 0 5%;
     }
-    .projectSlides{
-        width: 90vw;
-        height: 60vh;
-        display: flex;
-        overflow-x: scroll;
-        overflow-y: hidden;
-
-        .itemWrapper{
-            width: 480px;
-            aspect-ratio: 1;
-
-            img{
-                width: 80%;
-                border-radius: 6px;
-            }
-            .projectTitle{
-                font-size: 14px;
-                font-family: 'Montserrat';
-            }
-            .projectTags{
-                font-size: 12px;
-                font-family: 'Montserrat';
-            }
-        }
-    }
     .title{
         width: 70%;
         font-family: 'Montserrat';
@@ -279,20 +283,6 @@
         font-family: 'Montserrat';
         text-align: justify;
     }
-    .mailBtn{
-        background-color: #fafafa;
-        padding: 4px 12px;
-        border-radius: 6px;
-        font-size: 12px;
-        color: #0e0e0e;
-        font-family: 'Montserrat';
-        font-weight: normal;
-
-        &:hover{
-            background-color: #326fff;
-            color: #eaeaea;
-        }
-    }
     .label{
         width: 70%;
         font-size: 12px;
@@ -304,13 +294,109 @@
         a{
             background: #fafafa;
             color: #0e0e0e;
-            margin: 24px 16px 0 0;
-            padding: 8px 12px;
+            margin: 8px 16px 0 0;
+            padding: 4px 12px;
             border-radius: 6px;
+            display: inline-block;
 
             &:hover{
                 background-color: #326fff;
                 color: #eaeaea;
+            }
+        }
+        .mailBtn{
+            background-color: #fafafa;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            color: #0e0e0e;
+            font-family: 'Montserrat';
+            font-weight: normal;
+            width: fit-content;
+    
+            &:hover{
+                background-color: #326fff;
+                color: #eaeaea;
+            }
+        }
+    }
+}
+#hero, #stacks, #projects, #contact{
+    overflow-y: hidden;
+}
+
+@media (min-width: 280px) and (max-width: 639px){
+    #navigation{
+        .pivot_menu{
+            .onlyPhone{
+                display: block;
+            }
+            .notPhone{
+                display: none;
+            }        
+        }
+    }
+    #hero, #stacks, #projects, #contact{
+        .wrapper{
+            .flexCenter{
+                width: 100%;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+            .flexCenterVert{
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                padding: 0 5%;
+            }    
+        }
+    }
+    #hero{
+        .wrapper{
+            display: flex;
+            flex-direction: column-reverse;
+            .flexCenter{
+                .jumbotron{
+                    font-size: 6vh;
+                    width: 90%;
+                    margin: 32px auto;
+                    text-align: center;
+                }
+                .small12{
+                    .subTitle, .label{width: 100%; text-align: center;}
+                    .fullCrop{margin: 20px auto; width: 80%; display: block;}
+                }
+            }
+        }
+    }
+    #stacks, #projects{
+        .wrapper{
+            .flexCenter{
+                height: 80vh;
+            }
+        }
+    }
+    #contact{
+        .wrapper{
+            height: 200vh;
+        }
+        .socials, .title, .label{
+            width: 80%;
+            
+            .mailBtn{
+                display: block;
+            }
+        }
+    }
+    #navigation{
+
+        .pivot_menu{
+            padding: 6px 0px;
+
+            .pivot_button{
+                margin: 0px 12px;
             }
         }
     }

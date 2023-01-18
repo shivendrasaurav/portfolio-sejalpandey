@@ -22,7 +22,6 @@ const Contact = () =>{
                     </div>
                     <div className="flexCenter flexCenterVert lg-4 md-3 sm-9 frostInverted right">
                         <h1 className="title">Like my Work</h1>
-                        <a className="mailBtn" href="mailto:shivendrasaurav@gmail.com" target="_blank" referrer="no-referrer">Drop an Email</a>
                         <p className="label">
                             Adept in working with other professionals to achieve goals and solve problems together.<br/>
                         </p>
@@ -34,13 +33,15 @@ const Contact = () =>{
                         </p>
                         <p className="label">
                             Follow me on: <br/>
-                        </p><br/>
+                        </p>
                         <div className="socials">
                             <a href="https://github.com/shivendrasaurav" target="_blank"><i className="fab fa-github"></i></a>
                             <a href="https://www.instagram.com/shivendrasaurav/" target="_blank"><i className="fab fa-instagram"></i></a>
                             <a href="https://in.linkedin.com/in/shivendra-saurav-80a8ba191" target="_blank"><i className="fab fa-linkedin"></i></a>
                             <a href="https://www.youtube.com/c/thecodedrop" target="_blank"><i className="fab fa-youtube"></i></a>
-                            <a href="https://twitter.com/ShivendraSaurav" target="_blank"><i className="fab fa-twitter"></i></a>
+                            <a href="https://twitter.com/ShivendraSaurav" target="_blank"><i className="fab fa-twitter"></i></a><br/><br/>
+                            <a className="mailBtn" href="mailto:shivendrasaurav@gmail.com" target="_blank" referrer="no-referrer">Drop an Email</a>
+                            <a className="mailBtn" href="mailto:shivendrasaurav@gmail.com" target="_blank" referrer="no-referrer">Download Resume</a>
                         </div>
                     </div>
                 </div>

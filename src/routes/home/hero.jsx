@@ -14,9 +14,10 @@ const Hero = () =>{
         else{
             clipIndex++;
         }
-        console.log(clipIndex);
-
-        setTimeout(heroClipShow, 3000);
+//        console.log(clipIndex);
+        setTimeout(() => {
+            heroClipShow();
+        }, 2800);
     }
 
     const goNoir = () => {
@@ -41,8 +42,8 @@ const Hero = () =>{
         <Fragment>
                       
             <div id="hero">
-                <div className="wrapper columns large12 medium12 small12">
-                    <div className="flexCenter lg-4 md-3 sm-9 frostInverted">
+                <div className="wrapper large12 medium12 small12">
+                    <div className="flexCenter columns lg-4 md-3 sm-9 frostInverted">
                         <div className="large8 medium10 small12">
                             <p className="subTitle">
                                 Shivendra Saurav
@@ -53,7 +54,7 @@ const Hero = () =>{
                             </p>
                         </div>
                     </div>
-                    <div className="flexCenter flexCenterVert lg-5 md-6 sm-9">
+                    <div className="flexCenter flexCenterVert columns lg-5 md-6 sm-9">
                         <p className="subTitle">I am a</p>
                         <p className="jumbotron">{heroClip}</p>
                         <button id="noirBtn" onClick={goNoir}>Go Noir</button>
@@ -64,10 +65,11 @@ const Hero = () =>{
             <div id="navigation">
                 <div className="pivot_menu columns large12 medium12 small12 primary_inverted">
                     <a className="pivot_button" href="#">Shivendra Saurav</a>
-                    <a className="pivot_button right" href="#contact">Let's Talk</a>
-                    <a className="pivot_button right" href="#projects">Projects</a>
-                    <a className="pivot_button right" href="#stacks">Stacks</a>
-                    <a className="pivot_button right" href="#hero">Hero</a>
+                    <a className="pivot_button right notPhone" href="#contact">Let's Talk</a>
+                    <a className="pivot_button right notPhone" href="#projects">Projects</a>
+                    <a className="pivot_button right notPhone" href="#stacks">Stacks</a>
+                    <a className="pivot_button right notPhone" href="#hero">Hero</a>
+                    <a className="pivot_button right onlyPhone" href="#hero"><i className="fa-solid fa-bars"></i></a>
                 </div>
             </div>
             
