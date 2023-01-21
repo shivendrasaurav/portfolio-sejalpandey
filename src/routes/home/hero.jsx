@@ -45,7 +45,7 @@ const Hero = () =>{
 
     const downloadResume = () =>{
         document.getElementById("resumeBtn").click();
-        window.open("/resume");
+        //window.open("/resume");
     }
 
     useEffect(()=>{
