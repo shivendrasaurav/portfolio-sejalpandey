@@ -5,14 +5,16 @@ import 'fdweb/fluent-icons.css';
 import './App.css';
 import './Colors.css';
 
-import Index from "./routes/home/index.jsx";
+import Portfolio from "./routes/home/index.jsx";
+import Resume from "./routes/resume/index.jsx";
 
 const App = () => {
   return(
     <Fragment>
       <Router>
         <Routes>
-          <Route path="/" element={<Index/>} />
+          <Route path="/" element={<Portfolio/>} />
+          <Route path="/resume" element={<Resume/>} />
         </Routes>
       </Router>
     </Fragment>

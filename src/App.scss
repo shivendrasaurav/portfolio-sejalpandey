@@ -52,7 +52,7 @@
     }
 }
 
-#navigation{
+#navigation, #navigationPhone{
     position: sticky;
     top: 0;
     width: 100%;
@@ -101,7 +101,6 @@
         padding: 0 5%;
     }
     .title{
-        width: 80%;
         font-family: 'Montserrat';
         font-size: 26px;
         font-weight: bold;
@@ -121,15 +120,15 @@
         overflow-y: hidden;
 
         .itemWrapper{
-            width: 360px;
-            height: 360px;
+            width: 320px;
+            height: 320px;
             aspect-ratio: 1;
-            margin: 0 60px 0 0;
             padding: 40px 20px;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
             border-radius: 12px;
+            margin: 20px 50px 0 10px;
             
             .projectTitle{
                 font-size: 18px;
@@ -145,7 +144,7 @@
                 padding: 10px 0px;
 
                 .stackIcon{
-                    width: 60px;
+                    width: 20%;
                     border-radius: 12px;
                     border: 2px solid black;
                     margin: 0 10px 0 0;
@@ -218,11 +217,12 @@
         overflow-y: hidden;
 
         .itemWrapper{
-            width: 480px;
+            width: 320px;
             aspect-ratio: 1;
+            margin: 20px 50px 0 10px;
 
             img{
-                width: 80%;
+                width: 100%;
                 border-radius: 12px;
             }
             .projectTitle{
@@ -236,7 +236,6 @@
         }
     }
     .title{
-        width: 80%;
         font-family: 'Montserrat';
         font-size: 26px;
         font-weight: bold;
@@ -326,7 +325,7 @@
 }
 
 @media (min-width: 280px) and (max-width: 639px){
-    #navigation{
+    #navigation, #navigationPhone{
         .pivot_menu{
             .onlyPhone{
                 display: block;
@@ -375,6 +374,17 @@
         .wrapper{
             .flexCenter{
                 height: 80vh;
+                .projectSlides{
+                    padding-top: 5vh;
+                    .itemWrapper{
+                        width: 256px;
+                        .iconRow{
+                            .stackIcon{
+                                width: 20%;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -390,13 +400,95 @@
             }
         }
     }
-    #navigation{
+    #navigation, #navigationPhone{
 
         .pivot_menu{
             padding: 6px 0px;
 
             .pivot_button{
                 margin: 0px 12px;
+            }
+        }
+    }
+}
+
+.sideMenuBtn{
+    display: block;
+    color: #0e0e0e;
+    padding: 8px 12px;
+    height: auto;
+    text-align: center;
+    width: 80%;
+    margin: 10px auto 30px auto;
+    border: 2px solid transparent;
+    border-bottom: 2px solid #2e3e3e;
+
+    &:hover{
+        border: 2px solid #000000;
+    }
+    &.primary_red{
+        color: #fafafa;
+    }
+}
+.sidepanel_container{
+    padding: 0;
+    width: 100%;
+
+    .sidepanel_content{
+        max-width: 100%;
+        width: 100%;
+        background-color: transparent;
+    }
+}
+.page_container{
+    width: 100%;
+}
+
+.resumeWrapper{
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(circle at top left, #ff990033, transparent),
+    radial-gradient(circle at top right, #0e0efe33, transparent);
+    background-attachment: fixed;
+    overflow: hidden;
+
+    .resumeArea{
+        padding: 12vh 10% 0 10%;
+        overflow-y: scroll;
+        
+        .row{
+            display: block;
+
+            .oneFifth{
+                width: 20%;
+                margin: 0;
+                padding: 0 20px 0 0;
+                display: inline-block;
+                vertical-align: top;
+
+                .heroImg{
+                    width: 120px;
+                    border-radius: 90px;
+                }
+            }
+            .fourFifth{
+                width: 80%;
+                margin: 0;
+                padding: 0 20px 0 0;
+                display: inline-block;
+                vertical-align: top;
+                
+                .address{
+                    color: #5e5e5e;
+                    font-size: 14px;
+                    font-family: 'Lato';
+                }
+                .name{
+                    color: #0e0e0e;
+                    font-family: bold;
+                    font-size: 28px;
+                    font-family: 'Lato';
+                }
             }
         }
     }

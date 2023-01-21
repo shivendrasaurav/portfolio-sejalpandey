@@ -60,14 +60,16 @@ const Stacks = () =>{
                             {stacks.map(
                                 stack => (
                                     <div className={"itemWrapper itemPortrait dlevel2"} key={stack.title}>
-                                        <p className="projectTitle">{stack.title}</p>
-                                        <p className="projectTags">{stack.info}</p>
-                                        <div className="iconRow">
-                                            {stack.iconrow.map(
-                                                icon => (
-                                                    <img key={icon} src={icon} className="stackIcon" alt={stack.title} />
-                                                )
-                                            )}
+                                        <div className="item">
+                                            <p className="projectTitle">{stack.title}</p>
+                                            <p className="projectTags">{stack.info}</p>
+                                            <div className="iconRow">
+                                                {stack.iconrow.map(
+                                                    icon => (
+                                                        <img key={icon} src={icon} className="stackIcon" alt={stack.title} />
+                                                    )
+                                                )}
+                                            </div>
                                         </div>
                                    </div>
                                 )

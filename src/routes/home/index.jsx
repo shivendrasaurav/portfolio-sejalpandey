@@ -5,7 +5,7 @@ import Stacks from "./stack";
 import Projects from "./projects";
 import Contact from "./contact";
 
-const Index = () =>{
+const Portfolio = () =>{
 
     return(
         <Fragment>
@@ -26,5 +26,5 @@ const Index = () =>{
 
 }
 
-export default Index;
+export default Portfolio;
 

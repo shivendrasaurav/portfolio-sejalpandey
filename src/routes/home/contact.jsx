@@ -20,7 +20,7 @@ const Contact = () =>{
                             Right now I'm working at LTIMindtree as a Senior Software Engineer and I'm loving every bit of it.
                         </p>
                     </div>
-                    <div className="flexCenter flexCenterVert lg-4 md-3 sm-9 frostInverted right">
+                    <div className="flexCenter flexCenterVert lg-4 md-3 sm-9 frostInverted right" id="talk">
                         <h1 className="title">Like my Work</h1>
                         <p className="label">
                             Adept in working with other professionals to achieve goals and solve problems together.<br/>
