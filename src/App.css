@@ -403,17 +403,18 @@
 
 .resumeWrapper {
   width: 100%;
-  height: 100vh;
-  background: radial-gradient(circle at top left, rgba(255, 153, 0, 0.2), transparent), radial-gradient(circle at top right, rgba(14, 14, 254, 0.2), transparent);
+  padding: 0 10%;
+  background: radial-gradient(circle at top left, rgba(255, 153, 0, 0.2), transparent 40%), radial-gradient(circle at bottom left, rgba(250, 204, 255, 0.2), transparent 40%), radial-gradient(circle at bottom right, rgba(187, 255, 0, 0.2), transparent 60%), radial-gradient(circle at top right, rgba(0, 101, 175, 0.2), transparent 60%);
   background-attachment: fixed;
-  overflow: hidden;
 }
 .resumeWrapper .resumeArea {
-  padding: 12vh 10% 0 10%;
-  overflow-y: scroll;
+  padding: 0 0 20px 0;
+  border-radius: 8px;
+  background-color: #fafafa;
 }
 .resumeWrapper .resumeArea .row {
   display: block;
+  padding: 4vh 5vh 0 5vh;
 }
 .resumeWrapper .resumeArea .row .oneFifth {
   width: 20%;
@@ -426,6 +427,12 @@
   width: 120px;
   border-radius: 90px;
 }
+.resumeWrapper .resumeArea .row .oneFifth .title {
+  color: #4e4e4e;
+  font-size: 18px;
+  font-family: "Lato";
+  text-align: justify;
+}
 .resumeWrapper .resumeArea .row .fourFifth {
   width: 80%;
   margin: 0;
@@ -433,14 +440,95 @@
   display: inline-block;
   vertical-align: top;
 }
-.resumeWrapper .resumeArea .row .fourFifth .address {
-  color: #5e5e5e;
+.resumeWrapper .resumeArea .row .fourFifth .address a {
+  color: #4e4e4e;
   font-size: 14px;
   font-family: "Lato";
+  padding: 0 20px 0 0;
 }
 .resumeWrapper .resumeArea .row .fourFifth .name {
   color: #0e0e0e;
   font-family: bold;
-  font-size: 28px;
+  font-size: 32px;
   font-family: "Lato";
+  padding: 20px 0;
+}
+.resumeWrapper .resumeArea .row .fourFifth .bio {
+  color: #4e4e4e;
+  font-size: 22px;
+  font-family: "Lato";
+  padding: 0 48px 0 0;
+}
+.resumeWrapper .resumeArea .row .fourFifth .title {
+  color: #1e1e1e;
+  font-size: 22px;
+  font-family: "Lato";
+  text-align: justify;
+}
+.resumeWrapper .resumeArea .row .fourFifth .time {
+  color: #1e1e1e;
+  font-size: 14px;
+  font-family: "Lato";
+  text-align: justify;
+}
+.resumeWrapper .resumeArea .row .fourFifth .pointers {
+  margin: 0;
+  padding: 0 32px 0 16px;
+}
+.resumeWrapper .resumeArea .row .fourFifth .pointers li {
+  margin: 0;
+  padding: 6px 0;
+  font-size: 18px;
+  font-family: "Lato";
+}
+.resumeWrapper .resumeArea .row .fourFifth .links {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  width: 90%;
+  flex-direction: row;
+  justify-content: space-between;
+  vertical-align: top;
+}
+.resumeWrapper .resumeArea .row .fourFifth .links a {
+  padding: 0 12px 0 0;
+  margin: 0;
+  color: #1e1e1e;
+  font-weight: normal;
+  border-bottom: 2px solid #4e4e4e;
+  font-family: "Lato";
+  font-size: 14px;
+}
+.resumeWrapper .resumeArea .row .fourFifth .links a:hover, .resumeWrapper .resumeArea .row .fourFifth .links a:active {
+  border-bottom: 2px solid #0065ad;
+}
+.resumeWrapper .resumeArea .row .fourFifth .skills {
+  display: flex;
+  padding: 0;
+  margin: 0 0 12px 0;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  vertical-align: top;
+}
+.resumeWrapper .resumeArea .row .fourFifth .skills a {
+  padding: 0 12px 0 0;
+  margin: 0;
+  color: #1e1e1e;
+  font-weight: normal;
+  font-family: "Lato";
+  font-size: 16px;
+  width: 25%;
+}
+.resumeWrapper .resumeArea .row .fourFifth .skills a::before {
+  content: " ";
+  display: inline-block;
+  border: 5px solid #0065af;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  left: -4px;
+  top: 4px;
+  border-radius: 20px;
+  box-sizing: border-box;
 }/*# sourceMappingURL=App.css.map */
