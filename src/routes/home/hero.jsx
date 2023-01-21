@@ -43,6 +43,11 @@ const Hero = () =>{
         document.getElementById("side1").style.display="none";
     }
 
+    const downloadResume = () =>{
+        document.getElementById("resumeBtn").click();
+        window.open("/resume");
+    }
+
     useEffect(()=>{
         heroClipShow();
     }, [])
@@ -74,6 +79,7 @@ const Hero = () =>{
                         <p className="subTitle">I am a</p>
                         <p className="jumbotron">{heroClip}</p>
                         <button id="noirBtn" onClick={goNoir}>Go Noir</button>
+                        <button onClick={downloadResume}>View CV</button>
                     </div>
                 </div>
             </div>
