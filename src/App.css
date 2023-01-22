@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Montserrat&display=swap");
 #hero {
   width: 100%;
   background: transparent;
@@ -416,119 +416,136 @@
   display: block;
   padding: 4vh 5vh 0 5vh;
 }
+.resumeWrapper .resumeArea .row.header {
+  background-color: #dafada;
+}
+.resumeWrapper .resumeArea .row .bio {
+  color: #4e4e4e;
+  font-size: 22px;
+  font-family: "Poppins";
+  text-align: justify;
+}
 .resumeWrapper .resumeArea .row .oneFifth {
-  width: 20%;
+  width: 25%;
   margin: 0;
-  padding: 0 20px 0 0;
+  padding: 0;
   display: inline-block;
   vertical-align: top;
 }
 .resumeWrapper .resumeArea .row .oneFifth .heroImg {
+  display: block;
   width: 120px;
   border-radius: 90px;
+  aspect-ratio: 1;
+  margin-left: auto;
 }
 .resumeWrapper .resumeArea .row .oneFifth .title {
-  color: #4e4e4e;
-  font-size: 18px;
-  font-family: "Lato";
-  text-align: justify;
+  font-family: "Poppins";
+  font-weight: bold;
+  width: 80%;
+  margin-top: 16px;
+  font-size: 16px;
+  margin-left: auto;
+}
+.resumeWrapper .resumeArea .row .oneFifth .links {
+  padding: 10px 8px;
+  margin: 0 0 24px 0;
+  width: 80%;
+  flex-direction: row;
+  justify-content: space-between;
+  vertical-align: top;
+  border: 1px solid #4e4e4e;
+  border-radius: 6px;
+  margin-left: auto;
+}
+.resumeWrapper .resumeArea .row .oneFifth .links a {
+  display: block;
+  padding: 4px 8px;
+  margin: 6px 16px 0 0;
+  color: #1e1e1e;
+  font-weight: normal;
+  font-family: "Poppins";
+  font-size: 16px;
+  width: 100%;
+}
+.resumeWrapper .resumeArea .row .oneFifth .skills {
+  padding: 10px 0;
+  margin: 0 0 24px 0;
+  width: 80%;
+  flex-direction: row;
+  justify-content: space-between;
+  vertical-align: top;
+  border: 1px solid #4e4e4e;
+  border-radius: 6px;
+  margin-left: auto;
+}
+.resumeWrapper .resumeArea .row .oneFifth .skills a, .resumeWrapper .resumeArea .row .oneFifth .skills span {
+  display: block;
+  padding: 4px 8px;
+  margin: 6px 16px 0 0;
+  color: #1e1e1e;
+  font-weight: normal;
+  font-family: "Poppins";
+  font-size: 16px;
+  width: 100%;
 }
 .resumeWrapper .resumeArea .row .fourFifth {
-  width: 80%;
+  width: 75%;
   margin: 0;
-  padding: 0 20px 0 0;
+  padding: 0 32px 0 0;
   display: inline-block;
   vertical-align: top;
+}
+.resumeWrapper .resumeArea .row .fourFifth .address {
+  padding: 10px 0 0 0;
 }
 .resumeWrapper .resumeArea .row .fourFifth .address a {
   color: #4e4e4e;
   font-size: 14px;
-  font-family: "Lato";
+  font-family: "Poppins";
   padding: 0 20px 0 0;
+}
+.resumeWrapper .resumeArea .row .fourFifth .sectionTitle {
+  font-family: "Poppins";
+  font-weight: bold;
+  width: 100%;
+  margin-top: 16px;
+  font-size: 16px;
 }
 .resumeWrapper .resumeArea .row .fourFifth .name {
   color: #0e0e0e;
   font-family: bold;
   font-size: 32px;
-  font-family: "Lato";
-  padding: 20px 0;
+  font-family: "Poppins";
+  padding: 0 0 12px 0;
 }
 .resumeWrapper .resumeArea .row .fourFifth .bio {
   color: #4e4e4e;
   font-size: 22px;
-  font-family: "Lato";
-  padding: 0 48px 0 0;
+  font-family: "Poppins";
+  text-align: justify;
 }
 .resumeWrapper .resumeArea .row .fourFifth .title {
   color: #1e1e1e;
   font-size: 22px;
-  font-family: "Lato";
+  font-family: "Poppins";
   text-align: justify;
 }
 .resumeWrapper .resumeArea .row .fourFifth .time {
   color: #1e1e1e;
   font-size: 14px;
-  font-family: "Lato";
+  font-family: "Poppins";
   text-align: justify;
 }
 .resumeWrapper .resumeArea .row .fourFifth .pointers {
   margin: 0;
-  padding: 0 32px 0 16px;
+  margin-bottom: 24px;
+  padding-left: 20px;
 }
 .resumeWrapper .resumeArea .row .fourFifth .pointers li {
   margin: 0;
   padding: 6px 0;
   font-size: 18px;
-  font-family: "Lato";
-}
-.resumeWrapper .resumeArea .row .fourFifth .links {
-  display: flex;
-  padding: 0;
-  margin: 0;
-  width: 90%;
-  flex-direction: row;
-  justify-content: space-between;
-  vertical-align: top;
-}
-.resumeWrapper .resumeArea .row .fourFifth .links a {
-  padding: 0 12px 0 0;
-  margin: 0;
-  color: #1e1e1e;
-  font-weight: normal;
-  border-bottom: 2px solid #4e4e4e;
-  font-family: "Lato";
-  font-size: 14px;
-}
-.resumeWrapper .resumeArea .row .fourFifth .links a:hover, .resumeWrapper .resumeArea .row .fourFifth .links a:active {
-  border-bottom: 2px solid #0065ad;
-}
-.resumeWrapper .resumeArea .row .fourFifth .skills {
-  display: flex;
-  padding: 0;
-  margin: 0 0 12px 0;
-  width: 100%;
-  flex-direction: row;
-  justify-content: space-between;
-  vertical-align: top;
-}
-.resumeWrapper .resumeArea .row .fourFifth .skills a {
-  padding: 0 12px 0 0;
-  margin: 0;
-  color: #1e1e1e;
-  font-weight: normal;
-  font-family: "Lato";
-  font-size: 16px;
-  width: 25%;
-}
-.resumeWrapper .resumeArea .row .fourFifth .skills a::before {
-  content: " ";
-  display: inline-block;
-  border: 5px solid #0065af;
-  width: 20px;
-  height: 20px;
-  position: relative;
-  left: -4px;
-  top: 4px;
-  border-radius: 20px;
-  box-sizing: border-box;
+  font-family: "Poppins";
+  text-align: justify;
 }/*# sourceMappingURL=App.css.map */

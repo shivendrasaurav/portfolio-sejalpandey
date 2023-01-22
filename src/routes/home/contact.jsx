@@ -41,7 +41,7 @@ const Contact = () =>{
                             <a href="https://www.youtube.com/c/thecodedrop" target="_blank"><i className="fab fa-youtube"></i></a>
                             <a href="https://twitter.com/ShivendraSaurav" target="_blank"><i className="fab fa-twitter"></i></a><br/><br/>
                             <a className="mailBtn" href="mailto:shivendrasaurav@gmail.com" target="_blank" referrer="no-referrer">Drop an Email</a>
-                            <a id="resumeBtn" className="mailBtn" href="./assets/ShivendraSauravResume.pdf" target="_blank" referrer="no-referrer" download>Download CV</a>
+                            <a id="resumeBtn" className="mailBtn" href="./assets/Shivendra Saurav.pdf" target="_blank" referrer="no-referrer" download>Download CV</a>
                         </div>
                     </div>
                 </div>
