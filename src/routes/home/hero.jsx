@@ -3,7 +3,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const Hero = () =>{
 
-    var clippers = ['Full Stack Developer', 'UI / UX Designer', 'Content Creator', 'eSports Player'];
+    var clippers = ['Frontend Developer', 'UI / UX Designer', 'Content Creator', 'eSports Player'];
     const [heroClip, setHeroClip] = useState('Full Stack Developer');
     var clipIndex = 0;
 
