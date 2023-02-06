@@ -1,4 +1,4 @@
-import React, {Fragment, useEffect, useState} from "react";
+import React, {Fragment, useState} from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import stackData from "../../api/StackData.json";
 
