@@ -12,10 +12,12 @@
 }
 
 ::-webkit-scrollbar-thumb{
-  background-color: #0e0e0eaa;
+  background-color: #00aeffaa;
   border-radius: 8px;
 }
 
 #root{
   transition: 400ms;
+  background-color: #000000;
+  overflow: hidden;
 }

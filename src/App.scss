@@ -1,608 +1,314 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Fira+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Fira+Code&display=swap');
 
+.text-blue{
+    color: #00aeff;
+}
+.text-green{
+    color: #00FF94;
+}
+.text-white{
+    color: #fafafa;
+}
+.text-warm{
+    color: #fafada;
+}
 #hero{
+    display: flex;
+    align-items: center;
+    justify-content: start;
     width: 100%;
-    background: transparent;
-
-    .wrapper{
-        width: 100%;
-        overflow-x: hidden;
-        background: radial-gradient(circle at bottom right, #2c72ffaa, transparent),
-                    radial-gradient(circle at bottom left, #dadabaaa, transparent),
-                    radial-gradient(circle at top right, #ff0095aa, transparent),
-                    radial-gradient(circle at top left, #0acfddaa, transparent);
-    }
-    .flexCenter{
-        height: 100vh;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        vertical-align: top;
-    }
-    .flexCenterVert{
-        align-items: flex-start;
-        flex-direction: column;
-        vertical-align: top;
-        padding: 0 5%;
-    }
-    .jumbotron{
-        font-size: 6.4vw;
-        font-weight: bold;
-        color: #fafafa;
-        font-family: 'Montserrat';
-    }
-    .subTitle{
-        font-size: 32px;
-        color: #fafafa;
-        font-family: 'Montserrat';
-    }
-    .label{
-        color: #fafaca;
-        padding: 2px 0;
-        border-bottom: 2px solid yellow;
-        width: 90%;
-        font-family: 'Montserrat';
-    }
-    .fullCrop{
-        object-fit: cover;
-        aspect-ratio: 1.02;
-        border-radius: 12px;
-        width: 90%;
-    }
-}
-
-#navigation, #navigationPhone{
-    position: sticky;
-    top: 0;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    z-index: 1;
-
-    .pivot_menu{
-        padding: 12px 24px;
-
-        .pivot_button{
-            display: inline-block;
-            margin: 0 32px;
-            font-family: 'Montserrat';
-        }
-        .onlyPhone{
-            display: none;
-        }
-        .notPhone{
-            display: block;
-        }
-    }
-}
-
-#stacks{
-    width: 100%;
-    background: transparent;
+    height: 100vh;
+    padding: 12%;
+    background: url('./assets/hero.png');
+    background-size: cover;
     
-    .wrapper{
+    .hero-filter{
+        left: 0;
+        top: 0;
+        position: absolute;
         width: 100%;
-        overflow-x: hidden;
-        background: #eaeaea;
-    }
-    .flexCenter{
-        height: 90vh;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        vertical-align: top;
-    }
-    .flexCenterVert{
-        align-items: flex-start;
-        flex-direction: column;
-        vertical-align: top;
-        padding: 0 5%;
-    }
-    .title{
-        font-family: 'Montserrat';
-        font-size: 26px;
-        font-weight: bold;
-        padding: 4px 0px;
-    }
-    .info{
-        font-size: 18px;
-        width: 80%;
-        text-align: justify;
-        font-family:  'Montserrat';
-    }
-    .projectSlides{
-        width: 90vw;
-        height: 60vh;
-        display: flex;
-        overflow-x: scroll;
-        overflow-y: hidden;
-
-        .itemWrapper{
-            width: 320px;
-            height: 320px;
-            aspect-ratio: 1;
-            padding: 40px 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            border-radius: 12px;
-            margin: 20px 50px 0 10px;
-            
-            .projectTitle{
-                font-size: 18px;
-                font-family: 'Montserrat';
-            }
-            .projectTags{
-                font-size: 14px;
-                font-family: 'Montserrat';
-                text-align: justify;
-            }
-            .iconRow{
-                width: 100%;
-                padding: 10px 0px;
-
-                .stackIcon{
-                    width: 20%;
-                    border-radius: 12px;
-                    border: 2px solid black;
-                    margin: 0 10px 0 0;
-                }
-            }
-        }
-    }
-    .stackBtns{
-        width: 100%;
+        height: 100%;
+        z-index: 1;
         display: flex;
         flex-wrap: wrap;
-
-        button{
-            width: 100px;
-            height: 100px;
-            margin: 20px;
-            aspect-ratio: 1;
-            border-radius: 12px;
-            font-family:  'Montserrat';
-
-            &:hover, &:active{
-                opacity: 1;
-                background-color: #326fff;
-                color: #fcfcfc;
-            }
-        }
-
+        overflow: hidden;
+        backdrop-filter: grayscale(100%);
     }
-    .iconRow{
-        width: 60%;
-        padding: 10px 0px;
+    .hero-text{
+        width: 50vw;
+        z-index: 2;
 
-        .stackIcon{
-            width: 60px;
-            border-radius: 12px;
-            border: 2px solid black;
-            margin: 0 10px 0 0;
+        .subtitle{
+            font-size: 2.4rem;
+            font-family: 'Merriweather';
+        }
+        .title{
+            font-size: 6.4rem;
+            font-family: 'Montserrat';
+            font-weight: bold;
+            margin: 3vh 0;
         }
     }
 }
+#about{
+    background-color: #060606;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-#projects{
-    width: 100%;
-    background: transparent;
-
-    .wrapper{
-        width: 100%;
-        background: #eaeaea;
-        overflow-x: hidden;
-    }
-    .flexCenter{
-        height: 90vh;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        vertical-align: top;
-    }
-    .flexCenterVert{
-        align-items: flex-start;
-        flex-direction: column;
-        vertical-align: top;
-        padding: 0 5%;
-    }
-    .projectSlides{
-        width: 90vw;
-        height: 60vh;
-        display: flex;
-        overflow-x: scroll;
-        overflow-y: hidden;
-
-        .itemWrapper{
-            width: 320px;
-            aspect-ratio: 1;
-            margin: 20px 50px 0 10px;
-
-            img{
-                width: 100%;
-                border-radius: 12px;
-            }
-            .projectTitle{
-                font-size: 14px;
-                font-family: 'Montserrat';
-            }
-            .projectTags{
-                font-size: 12px;
-                font-family: 'Montserrat';
-            }
-        }
-    }
     .title{
-        font-family: 'Montserrat';
-        font-size: 26px;
-        font-weight: bold;
-        padding: 4px 0px;
-    }
-}
-
-#contact{
-    width: 100%;
-    background: transparent;
-
-    .wrapper{
-        width: 100%;
-        overflow-x: hidden;
-        background: radial-gradient(circle at bottom right, #2c72ffaa, transparent),
-                    radial-gradient(circle at bottom left, #ffffbeaa, transparent),
-                    radial-gradient(circle at top right, #ff0095aa, transparent),
-                    radial-gradient(circle at top left, #1bf0ffaa, transparent);
-    }
-    .flexCenter{
-        height: 100vh;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        vertical-align: top;
-    }
-    .flexCenterVert{
-        align-items: flex-start;
-        flex-direction: column;
-        vertical-align: top;
-        padding: 0 5%;
-    }
-    .title{
-        width: 70%;
-        font-family: 'Montserrat';
-        font-size: 26px;
-        font-weight: bold;
-        padding: 4px 0px;
-    }
-    .info{
-        width: 70%;
         font-size: 16px;
-        font-family: 'Montserrat';
-        text-align: justify;
+        width: 50vw;
+        font-family: 'Fira Sans';
     }
-    .label{
-        width: 70%;
-        font-size: 12px;
-        font-family: 'Montserrat';
-        text-align: justify;
+    .subtitle{
+        font-size: 32px;
+        width: 50vw;
+        font-family: 'Merriweather';
+        margin-top: 2vh;
+        margin-bottom: 2vh;
     }
-    .socials{
+    .paragraph{
+        font-size: 18px;
+        width: 50vw;
+        font-family: 'Montserrat';
+        margin: 2vh 0;
+    }
+    .stats{
+        display: flex;
+        width: 50vw;
+        justify-content: space-around;
+        margin-top: 2vh;
+
+        .stat{
+            text-align: center;
+            padding: 4px 32px;
+
+            .num{
+                font-size: 48px;
+                font-family: 'Montserrat';
+            }
+            .info{
+                font-size: 16px;
+                font-family: 'Fira Code';
+            }
+        }
+    }
+}
+#skills{
+    background-color: #060606;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .title{
+        font-size: 16px;
+        width: 50vw;
+        font-family: 'Fira Sans';
+    }
+    .subtitle{
+        font-size: 32px;
+        width: 50vw;
+        font-family: 'Merriweather';
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+    }
+    .tools{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 2vh;
+        border: 2px solid #00FF94;
+        background-color: #0e0e0e;
+
+        &:nth-child(1){
+            width: 30vw;
+            margin-top: 6vh;
+        }
+        &:nth-child(1){
+            width: 40vw;
+        }
+        &:nth-child(1){
+            width: 50vw;
+        }
+
+        .tool{
+            text-align: center;
+            padding: 4px 32px;
+            margin: 0 8px;
+
+            .name{
+                font-size: 28px;
+                font-family: 'Montserrat';
+            }
+            .type{
+                font-size: 16px;
+                font-family: 'Fira Code';
+            }
+        }
+    }
+}
+#projects{
+    background-color: #060606;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .title{
+        font-size: 16px;
+        width: 50vw;
+        font-family: 'Fira Sans';
+    }
+    .subtitle{
+        font-size: 32px;
+        width: 50vw;
+        font-family: 'Merriweather';
+        margin-top: 2vh;
+        margin-bottom: 5vh;
+    }
+    .project-wrapper{
+        height: auto;
+
+        .item-wrapper{
+            width: 65vw;
+            height: 70vh;
+            margin: 1vh 0 3vh 0;
+
+            &:hover{
+                .thumbnail{
+                    span{
+                        transform: translate(-10%, -240px);
+                    }
+                }
+            }
+
+            .thumbnail{
+                width: 100%;
+                height: 100%;
+                background-position: 0, 0;
+                overflow: hidden;
+
+                span{
+                    display: block;
+                    width: 200%;
+                    height: 200%;
+                    transition: 3s;
+                }
+            }
+            .project-info{
+                width: 100%;
+                height: 100%;
+                background: radial-gradient(circle at bottom left, #0e0e0ecc, #2e2e2e88);
+                position: relative;
+                margin-top: -70vh;
+                display: flex;
+                flex-direction: column;
+                padding: 64px 32px;
+                justify-content:space-between;
+                align-items: start;
+
+                .project-title{
+                    font-size: 28px;
+                    color: #fafada;
+                    font-family: 'Montserrat';
+                    font-weight: bold;
+                }
+                .project-tags{                    
+                    font-size: 16px;
+                    color: #fafada;
+                    font-family: 'Fira Code';
+                }
+                .project-description{                    
+                    font-size: 16px;
+                    color: #fafada;
+                    font-family: 'Fira Sans';
+                    width: 60%;
+                    transition: 320ms;
+                }
+                a{
+                    background-color: #00FF94;
+                    color: #0e0e0e;
+                    padding: 6px 16px;
+                    font-size: 14px;
+                    font-weight: normal;
+                    font-family: 'Fira Sans';
+                    transition: 300ms;
+        
+                    &:hover{
+                        background-color: #00aeff;
+                        color: #fafada;
+                    }
+                }
+            }
+        }
+    }
+}
+#contact{
+    background-color: #060606;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .title{
+        font-size: 16px;
+        width: 50vw;
+        font-family: 'Fira Sans';
+    }
+    .subtitle{
+        font-size: 32px;
+        width: 50vw;
+        font-family: 'Merriweather';
+        margin-top: 2vh;
+        margin-bottom: 5vh;
+    }
+    .buttons{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 8vh;
 
         a{
-            background: #fafafa;
+            background-color: #00FF94;
             color: #0e0e0e;
-            margin: 8px 16px 0 0;
-            padding: 4px 12px;
-            border-radius: 6px;
-            display: inline-block;
-
-            &:hover{
-                background-color: #326fff;
-                color: #eaeaea;
-            }
-        }
-        .mailBtn{
-            background-color: #fafafa;
-            padding: 8px 12px;
-            border-radius: 6px;
-            font-size: 12px;
-            color: #0e0e0e;
-            font-family: 'Montserrat';
+            padding: 6px 16px;
+            font-size: 14px;
             font-weight: normal;
-            width: fit-content;
-    
+            font-family: 'Fira Sans';
+            margin: 2px 12px;
+            transition: 300ms;
+
             &:hover{
-                background-color: #326fff;
-                color: #eaeaea;
+                background-color: #00aeff;
+                color: #fafada;
             }
         }
     }
-}
-#hero, #stacks, #projects, #contact{
-    overflow-y: hidden;
-}
+    .socials{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 8vh;
 
-@media (min-width: 280px) and (max-width: 639px){
-    #navigation, #navigationPhone{
-        .pivot_menu{
-            .onlyPhone{
-                display: block;
-            }
-            .notPhone{
-                display: none;
-            }        
-        }
-    }
-    #hero, #stacks, #projects, #contact{
-        .wrapper{
-            .flexCenter{
-                width: 100%;
-                display: inline-flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-            }
-            .flexCenterVert{
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-                padding: 0 5%;
-            }    
-        }
-    }
-    #hero{
-        .wrapper{
-            display: flex;
-            flex-direction: column-reverse;
-            .flexCenter{
-                .jumbotron{
-                    font-size: 6vh;
-                    width: 90%;
-                    margin: 32px auto;
-                    text-align: center;
-                }
-                .small12{
-                    .subTitle, .label{width: 100%; text-align: center;}
-                    .fullCrop{margin: 20px auto; width: 80%; display: block;}
-                }
-            }
-        }
-    }
-    #stacks, #projects{
-        .wrapper{
-            .flexCenter{
-                height: 80vh;
-                .projectSlides{
-                    padding-top: 5vh;
-                    .itemWrapper{
-                        width: 256px;
-                        .iconRow{
-                            .stackIcon{
-                                width: 20%;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-    #contact{
-        .wrapper{
-            height: 200vh;
-        }
-        .socials, .title, .label{
-            width: 80%;
-            
-            .mailBtn{
-                display: block;
-            }
-        }
-    }
-    #navigation, #navigationPhone{
+        a{
+            color: #00FF94;
+            font-size: 24px;
+            font-weight: normal;
+            font-family: 'Fira Sans';
+            margin: 2px 12px;
+            padding: 4px 8px;
+            transform: scale(1.2);
+            transition: 300ms;
 
-        .pivot_menu{
-            padding: 6px 0px;
-
-            .pivot_button{
-                margin: 0px 12px;
-            }
-        }
-    }
-}
-
-.sideMenuBtn{
-    display: block;
-    color: #0e0e0e;
-    padding: 8px 12px;
-    height: auto;
-    text-align: center;
-    width: 80%;
-    margin: 10px auto 30px auto;
-    border: 2px solid transparent;
-    border-bottom: 2px solid #2e3e3e;
-
-    &:hover{
-        border: 2px solid #000000;
-    }
-    &.primary_red{
-        color: #fafafa;
-    }
-}
-.sidepanel_container{
-    padding: 0;
-    width: 100%;
-
-    .sidepanel_content{
-        max-width: 100%;
-        width: 100%;
-        background-color: transparent;
-    }
-}
-.page_container{
-    width: 100%;
-}
-
-.resumeWrapper{
-    width: 100%;
-    padding: 0 10%;
-    background: radial-gradient(circle at top left, #ff990033, transparent 40%),
-    radial-gradient(circle at bottom left, #faccff33, transparent 40%),
-    radial-gradient(circle at bottom right, #bbff0033, transparent 60%),
-    radial-gradient(circle at top right, #0065af33, transparent 60%);
-    background-attachment: fixed;
-
-    .resumeArea{
-        padding: 0 0 20px 0;
-        border-radius: 8px;
-        background-color: #fafafa;
-        
-        .row{
-            display: block;
-            padding: 4vh 5vh 0 5vh;
-
-            &.header{
-                background-color: #dafada;
-            }
-
-            .bio{
-                color: #4e4e4e;
-                font-size: 22px;
-                font-family: 'Poppins';
-                text-align: justify;
-            }
-            .oneFifth{
-                width: 25%;
-                margin: 0;
-                padding: 0;
-                display: inline-block;
-                vertical-align: top;
-
-                .heroImg{
-                    display: block;
-                    width: 120px;
-                    border-radius: 90px;
-                    aspect-ratio: 1;
-                    margin-left: auto;
-                }
-                .title{
-                    font-family: 'Poppins';
-                    font-weight: bold;
-                    width: 80%;
-                    margin-top: 16px;
-                    font-size: 16px;
-                    margin-left: auto;
-                } 
-                .links{
-                    padding: 10px 8px;
-                    margin: 0 0 24px 0;
-                    width: 80%;
-                    flex-direction: row;
-                    justify-content: space-between;
-                    vertical-align: top;
-                    border: 1px solid #4e4e4e;
-                    border-radius: 6px;
-                    margin-left: auto;
-
-                    a{
-                        display: block;
-                        padding: 4px 8px;
-                        margin: 6px 16px 0 0;
-                        color: #1e1e1e;
-                        font-weight: normal;
-                        font-family: 'Poppins';
-                        font-size: 16px;
-                        width: 100%;
-                    }
-                }
-                .skills{
-                    padding: 10px 0;
-                    margin: 0 0 24px 0;
-                    width: 80%;
-                    flex-direction: row;
-                    justify-content: space-between;
-                    vertical-align: top;
-                    border: 1px solid #4e4e4e;
-                    border-radius: 6px;
-                    margin-left: auto;
-
-
-                    a, span{
-                        display: block;
-                        padding: 4px 8px;
-                        margin: 6px 16px 0 0;
-                        color: #1e1e1e;
-                        font-weight: normal;
-                        font-family: 'Poppins';
-                        font-size: 16px;
-                        width: 100%;
-                    }
-                }
-            }
-            .fourFifth{
-                width: 75%;
-                margin: 0;
-                padding: 0 32px 0 0;
-                display: inline-block;
-                vertical-align: top;
-                
-                .address{
-                    padding: 10px 0 0 0;                     
-
-                    a{
-                        color: #4e4e4e;
-                        font-size: 14px;
-                        font-family: 'Poppins';
-                        padding: 0 20px 0 0;  
-                    }
-                }
-                .sectionTitle{
-                    font-family: 'Poppins';
-                    font-weight: bold;
-                    width: 100%;
-                    margin-top: 16px;
-                    font-size: 16px;
-                }
-                .name{
-                    color: #0e0e0e;
-                    font-family: bold;
-                    font-size: 32px;
-                    font-family: 'Poppins';
-                    padding: 0 0 12px 0;
-                }
-                .bio{
-                    color: #4e4e4e;
-                    font-size: 22px;
-                    font-family: 'Poppins';
-                    text-align: justify;
-                }
-                .title{
-                    color: #1e1e1e;
-                    font-size: 22px;
-                    font-family: 'Poppins';
-                    text-align: justify;
-                }
-                .time{
-                    color: #1e1e1e;
-                    font-size: 14px;
-                    font-family: 'Poppins';
-                    text-align: justify;
-                }
-                .pointers{
-                    margin: 0;
-                    margin-bottom: 24px;
-                    padding-left: 20px;
-
-                    li{
-                        margin: 0;
-                        padding: 6px 0;
-                        font-size: 18px;
-                        font-family: 'Poppins';
-                        text-align: justify;
-                    }
-                }
-               
+            &:hover{
+                color: #fafada;                
             }
         }
     }

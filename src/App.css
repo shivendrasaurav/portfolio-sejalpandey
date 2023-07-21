@@ -1,551 +1,298 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Merriweather&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Fira+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Fira+Code&display=swap");
+.text-blue {
+  color: #00aeff;
+}
+
+.text-green {
+  color: #00FF94;
+}
+
+.text-white {
+  color: #fafafa;
+}
+
+.text-warm {
+  color: #fafada;
+}
+
 #hero {
+  display: flex;
+  align-items: center;
+  justify-content: start;
   width: 100%;
-  background: transparent;
-}
-#hero .wrapper {
-  width: 100%;
-  overflow-x: hidden;
-  background: radial-gradient(circle at bottom right, rgba(44, 114, 255, 0.6666666667), transparent), radial-gradient(circle at bottom left, rgba(218, 218, 186, 0.6666666667), transparent), radial-gradient(circle at top right, rgba(255, 0, 149, 0.6666666667), transparent), radial-gradient(circle at top left, rgba(10, 207, 221, 0.6666666667), transparent);
-}
-#hero .flexCenter {
   height: 100vh;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  vertical-align: top;
+  padding: 12%;
+  background: url("./assets/hero.png");
+  background-size: cover;
 }
-#hero .flexCenterVert {
-  align-items: flex-start;
-  flex-direction: column;
-  vertical-align: top;
-  padding: 0 5%;
-}
-#hero .jumbotron {
-  font-size: 6.4vw;
-  font-weight: bold;
-  color: #fafafa;
-  font-family: "Montserrat";
-}
-#hero .subTitle {
-  font-size: 32px;
-  color: #fafafa;
-  font-family: "Montserrat";
-}
-#hero .label {
-  color: #fafaca;
-  padding: 2px 0;
-  border-bottom: 2px solid yellow;
-  width: 90%;
-  font-family: "Montserrat";
-}
-#hero .fullCrop {
-  -o-object-fit: cover;
-     object-fit: cover;
-  aspect-ratio: 1.02;
-  border-radius: 12px;
-  width: 90%;
-}
-
-#navigation, #navigationPhone {
-  position: -webkit-sticky;
-  position: sticky;
+#hero .hero-filter {
+  left: 0;
   top: 0;
+  position: absolute;
   width: 100%;
-  padding: 0;
-  margin: 0;
+  height: 100%;
   z-index: 1;
-}
-#navigation .pivot_menu, #navigationPhone .pivot_menu {
-  padding: 12px 24px;
-}
-#navigation .pivot_menu .pivot_button, #navigationPhone .pivot_menu .pivot_button {
-  display: inline-block;
-  margin: 0 32px;
-  font-family: "Montserrat";
-}
-#navigation .pivot_menu .onlyPhone, #navigationPhone .pivot_menu .onlyPhone {
-  display: none;
-}
-#navigation .pivot_menu .notPhone, #navigationPhone .pivot_menu .notPhone {
-  display: block;
-}
-
-#stacks {
-  width: 100%;
-  background: transparent;
-}
-#stacks .wrapper {
-  width: 100%;
-  overflow-x: hidden;
-  background: #eaeaea;
-}
-#stacks .flexCenter {
-  height: 90vh;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  vertical-align: top;
-}
-#stacks .flexCenterVert {
-  align-items: flex-start;
-  flex-direction: column;
-  vertical-align: top;
-  padding: 0 5%;
-}
-#stacks .title {
-  font-family: "Montserrat";
-  font-size: 26px;
-  font-weight: bold;
-  padding: 4px 0px;
-}
-#stacks .info {
-  font-size: 18px;
-  width: 80%;
-  text-align: justify;
-  font-family: "Montserrat";
-}
-#stacks .projectSlides {
-  width: 90vw;
-  height: 60vh;
-  display: flex;
-  overflow-x: scroll;
-  overflow-y: hidden;
-}
-#stacks .projectSlides .itemWrapper {
-  width: 320px;
-  height: 320px;
-  aspect-ratio: 1;
-  padding: 40px 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  border-radius: 12px;
-  margin: 20px 50px 0 10px;
-}
-#stacks .projectSlides .itemWrapper .projectTitle {
-  font-size: 18px;
-  font-family: "Montserrat";
-}
-#stacks .projectSlides .itemWrapper .projectTags {
-  font-size: 14px;
-  font-family: "Montserrat";
-  text-align: justify;
-}
-#stacks .projectSlides .itemWrapper .iconRow {
-  width: 100%;
-  padding: 10px 0px;
-}
-#stacks .projectSlides .itemWrapper .iconRow .stackIcon {
-  width: 20%;
-  border-radius: 12px;
-  border: 2px solid black;
-  margin: 0 10px 0 0;
-}
-#stacks .stackBtns {
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
+  overflow: hidden;
+  -webkit-backdrop-filter: grayscale(100%);
+          backdrop-filter: grayscale(100%);
 }
-#stacks .stackBtns button {
-  width: 100px;
-  height: 100px;
-  margin: 20px;
-  aspect-ratio: 1;
-  border-radius: 12px;
+#hero .hero-text {
+  width: 50vw;
+  z-index: 2;
+}
+#hero .hero-text .subtitle {
+  font-size: 2.4rem;
+  font-family: "Merriweather";
+}
+#hero .hero-text .title {
+  font-size: 6.4rem;
+  font-family: "Montserrat";
+  font-weight: bold;
+  margin: 3vh 0;
+}
+
+#about {
+  background-color: #060606;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#about .title {
+  font-size: 16px;
+  width: 50vw;
+  font-family: "Fira Sans";
+}
+#about .subtitle {
+  font-size: 32px;
+  width: 50vw;
+  font-family: "Merriweather";
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+#about .paragraph {
+  font-size: 18px;
+  width: 50vw;
+  font-family: "Montserrat";
+  margin: 2vh 0;
+}
+#about .stats {
+  display: flex;
+  width: 50vw;
+  justify-content: space-around;
+  margin-top: 2vh;
+}
+#about .stats .stat {
+  text-align: center;
+  padding: 4px 32px;
+}
+#about .stats .stat .num {
+  font-size: 48px;
   font-family: "Montserrat";
 }
-#stacks .stackBtns button:hover, #stacks .stackBtns button:active {
-  opacity: 1;
-  background-color: #326fff;
-  color: #fcfcfc;
+#about .stats .stat .info {
+  font-size: 16px;
+  font-family: "Fira Code";
 }
-#stacks .iconRow {
-  width: 60%;
-  padding: 10px 0px;
+
+#skills {
+  background-color: #060606;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-#stacks .iconRow .stackIcon {
-  width: 60px;
-  border-radius: 12px;
-  border: 2px solid black;
-  margin: 0 10px 0 0;
+#skills .title {
+  font-size: 16px;
+  width: 50vw;
+  font-family: "Fira Sans";
+}
+#skills .subtitle {
+  font-size: 32px;
+  width: 50vw;
+  font-family: "Merriweather";
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+#skills .tools {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2vh;
+  border: 2px solid #00FF94;
+  background-color: #0e0e0e;
+}
+#skills .tools:nth-child(1) {
+  width: 30vw;
+  margin-top: 6vh;
+}
+#skills .tools:nth-child(1) {
+  width: 40vw;
+}
+#skills .tools:nth-child(1) {
+  width: 50vw;
+}
+#skills .tools .tool {
+  text-align: center;
+  padding: 4px 32px;
+  margin: 0 8px;
+}
+#skills .tools .tool .name {
+  font-size: 28px;
+  font-family: "Montserrat";
+}
+#skills .tools .tool .type {
+  font-size: 16px;
+  font-family: "Fira Code";
 }
 
 #projects {
-  width: 100%;
-  background: transparent;
-}
-#projects .wrapper {
-  width: 100%;
-  background: #eaeaea;
-  overflow-x: hidden;
-}
-#projects .flexCenter {
-  height: 90vh;
-  display: inline-flex;
+  background-color: #060606;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  vertical-align: top;
-}
-#projects .flexCenterVert {
-  align-items: flex-start;
-  flex-direction: column;
-  vertical-align: top;
-  padding: 0 5%;
-}
-#projects .projectSlides {
-  width: 90vw;
-  height: 60vh;
-  display: flex;
-  overflow-x: scroll;
-  overflow-y: hidden;
-}
-#projects .projectSlides .itemWrapper {
-  width: 320px;
-  aspect-ratio: 1;
-  margin: 20px 50px 0 10px;
-}
-#projects .projectSlides .itemWrapper img {
-  width: 100%;
-  border-radius: 12px;
-}
-#projects .projectSlides .itemWrapper .projectTitle {
-  font-size: 14px;
-  font-family: "Montserrat";
-}
-#projects .projectSlides .itemWrapper .projectTags {
-  font-size: 12px;
-  font-family: "Montserrat";
 }
 #projects .title {
+  font-size: 16px;
+  width: 50vw;
+  font-family: "Fira Sans";
+}
+#projects .subtitle {
+  font-size: 32px;
+  width: 50vw;
+  font-family: "Merriweather";
+  margin-top: 2vh;
+  margin-bottom: 5vh;
+}
+#projects .project-wrapper {
+  height: auto;
+}
+#projects .project-wrapper .item-wrapper {
+  width: 65vw;
+  height: 70vh;
+  margin: 1vh 0 3vh 0;
+}
+#projects .project-wrapper .item-wrapper:hover .thumbnail span {
+  transform: translate(-10%, -240px);
+}
+#projects .project-wrapper .item-wrapper .thumbnail {
+  width: 100%;
+  height: 100%;
+  background-position: 0, 0;
+  overflow: hidden;
+}
+#projects .project-wrapper .item-wrapper .thumbnail span {
+  display: block;
+  width: 200%;
+  height: 200%;
+  transition: 3s;
+}
+#projects .project-wrapper .item-wrapper .project-info {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at bottom left, rgba(14, 14, 14, 0.8), rgba(46, 46, 46, 0.5333333333));
+  position: relative;
+  margin-top: -70vh;
+  display: flex;
+  flex-direction: column;
+  padding: 64px 32px;
+  justify-content: space-between;
+  align-items: start;
+}
+#projects .project-wrapper .item-wrapper .project-info .project-title {
+  font-size: 28px;
+  color: #fafada;
   font-family: "Montserrat";
-  font-size: 26px;
   font-weight: bold;
-  padding: 4px 0px;
+}
+#projects .project-wrapper .item-wrapper .project-info .project-tags {
+  font-size: 16px;
+  color: #fafada;
+  font-family: "Fira Code";
+}
+#projects .project-wrapper .item-wrapper .project-info .project-description {
+  font-size: 16px;
+  color: #fafada;
+  font-family: "Fira Sans";
+  width: 60%;
+  transition: 320ms;
+}
+#projects .project-wrapper .item-wrapper .project-info a {
+  background-color: #00FF94;
+  color: #0e0e0e;
+  padding: 6px 16px;
+  font-size: 14px;
+  font-weight: normal;
+  font-family: "Fira Sans";
+  transition: 300ms;
+}
+#projects .project-wrapper .item-wrapper .project-info a:hover {
+  background-color: #00aeff;
+  color: #fafada;
 }
 
 #contact {
-  width: 100%;
-  background: transparent;
-}
-#contact .wrapper {
-  width: 100%;
-  overflow-x: hidden;
-  background: radial-gradient(circle at bottom right, rgba(44, 114, 255, 0.6666666667), transparent), radial-gradient(circle at bottom left, rgba(255, 255, 190, 0.6666666667), transparent), radial-gradient(circle at top right, rgba(255, 0, 149, 0.6666666667), transparent), radial-gradient(circle at top left, rgba(27, 240, 255, 0.6666666667), transparent);
-}
-#contact .flexCenter {
-  height: 100vh;
-  display: inline-flex;
+  background-color: #060606;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  vertical-align: top;
-}
-#contact .flexCenterVert {
-  align-items: flex-start;
-  flex-direction: column;
-  vertical-align: top;
-  padding: 0 5%;
 }
 #contact .title {
-  width: 70%;
-  font-family: "Montserrat";
-  font-size: 26px;
-  font-weight: bold;
-  padding: 4px 0px;
-}
-#contact .info {
-  width: 70%;
   font-size: 16px;
-  font-family: "Montserrat";
-  text-align: justify;
+  width: 50vw;
+  font-family: "Fira Sans";
 }
-#contact .label {
-  width: 70%;
-  font-size: 12px;
-  font-family: "Montserrat";
-  text-align: justify;
+#contact .subtitle {
+  font-size: 32px;
+  width: 50vw;
+  font-family: "Merriweather";
+  margin-top: 2vh;
+  margin-bottom: 5vh;
+}
+#contact .buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 8vh;
+}
+#contact .buttons a {
+  background-color: #00FF94;
+  color: #0e0e0e;
+  padding: 6px 16px;
+  font-size: 14px;
+  font-weight: normal;
+  font-family: "Fira Sans";
+  margin: 2px 12px;
+  transition: 300ms;
+}
+#contact .buttons a:hover {
+  background-color: #00aeff;
+  color: #fafada;
+}
+#contact .socials {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 8vh;
 }
 #contact .socials a {
-  background: #fafafa;
-  color: #0e0e0e;
-  margin: 8px 16px 0 0;
-  padding: 4px 12px;
-  border-radius: 6px;
-  display: inline-block;
+  color: #00FF94;
+  font-size: 24px;
+  font-weight: normal;
+  font-family: "Fira Sans";
+  margin: 2px 12px;
+  padding: 4px 8px;
+  transform: scale(1.2);
+  transition: 300ms;
 }
 #contact .socials a:hover {
-  background-color: #326fff;
-  color: #eaeaea;
-}
-#contact .socials .mailBtn {
-  background-color: #fafafa;
-  padding: 8px 12px;
-  border-radius: 6px;
-  font-size: 12px;
-  color: #0e0e0e;
-  font-family: "Montserrat";
-  font-weight: normal;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-#contact .socials .mailBtn:hover {
-  background-color: #326fff;
-  color: #eaeaea;
-}
-
-#hero, #stacks, #projects, #contact {
-  overflow-y: hidden;
-}
-
-@media (min-width: 280px) and (max-width: 639px) {
-  #navigation .pivot_menu .onlyPhone, #navigationPhone .pivot_menu .onlyPhone {
-    display: block;
-  }
-  #navigation .pivot_menu .notPhone, #navigationPhone .pivot_menu .notPhone {
-    display: none;
-  }
-  #hero .wrapper .flexCenter, #stacks .wrapper .flexCenter, #projects .wrapper .flexCenter, #contact .wrapper .flexCenter {
-    width: 100%;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  #hero .wrapper .flexCenterVert, #stacks .wrapper .flexCenterVert, #projects .wrapper .flexCenterVert, #contact .wrapper .flexCenterVert {
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 0 5%;
-  }
-  #hero .wrapper {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-  #hero .wrapper .flexCenter .jumbotron {
-    font-size: 6vh;
-    width: 90%;
-    margin: 32px auto;
-    text-align: center;
-  }
-  #hero .wrapper .flexCenter .small12 .subTitle, #hero .wrapper .flexCenter .small12 .label {
-    width: 100%;
-    text-align: center;
-  }
-  #hero .wrapper .flexCenter .small12 .fullCrop {
-    margin: 20px auto;
-    width: 80%;
-    display: block;
-  }
-  #stacks .wrapper .flexCenter, #projects .wrapper .flexCenter {
-    height: 80vh;
-  }
-  #stacks .wrapper .flexCenter .projectSlides, #projects .wrapper .flexCenter .projectSlides {
-    padding-top: 5vh;
-  }
-  #stacks .wrapper .flexCenter .projectSlides .itemWrapper, #projects .wrapper .flexCenter .projectSlides .itemWrapper {
-    width: 256px;
-  }
-  #stacks .wrapper .flexCenter .projectSlides .itemWrapper .iconRow .stackIcon, #projects .wrapper .flexCenter .projectSlides .itemWrapper .iconRow .stackIcon {
-    width: 20%;
-  }
-  #contact .wrapper {
-    height: 200vh;
-  }
-  #contact .socials, #contact .title, #contact .label {
-    width: 80%;
-  }
-  #contact .socials .mailBtn, #contact .title .mailBtn, #contact .label .mailBtn {
-    display: block;
-  }
-  #navigation .pivot_menu, #navigationPhone .pivot_menu {
-    padding: 6px 0px;
-  }
-  #navigation .pivot_menu .pivot_button, #navigationPhone .pivot_menu .pivot_button {
-    margin: 0px 12px;
-  }
-}
-.sideMenuBtn {
-  display: block;
-  color: #0e0e0e;
-  padding: 8px 12px;
-  height: auto;
-  text-align: center;
-  width: 80%;
-  margin: 10px auto 30px auto;
-  border: 2px solid transparent;
-  border-bottom: 2px solid #2e3e3e;
-}
-.sideMenuBtn:hover {
-  border: 2px solid #000000;
-}
-.sideMenuBtn.primary_red {
-  color: #fafafa;
-}
-
-.sidepanel_container {
-  padding: 0;
-  width: 100%;
-}
-.sidepanel_container .sidepanel_content {
-  max-width: 100%;
-  width: 100%;
-  background-color: transparent;
-}
-
-.page_container {
-  width: 100%;
-}
-
-.resumeWrapper {
-  width: 100%;
-  padding: 0 10%;
-  background: radial-gradient(circle at top left, rgba(255, 153, 0, 0.2), transparent 40%), radial-gradient(circle at bottom left, rgba(250, 204, 255, 0.2), transparent 40%), radial-gradient(circle at bottom right, rgba(187, 255, 0, 0.2), transparent 60%), radial-gradient(circle at top right, rgba(0, 101, 175, 0.2), transparent 60%);
-  background-attachment: fixed;
-}
-.resumeWrapper .resumeArea {
-  padding: 0 0 20px 0;
-  border-radius: 8px;
-  background-color: #fafafa;
-}
-.resumeWrapper .resumeArea .row {
-  display: block;
-  padding: 4vh 5vh 0 5vh;
-}
-.resumeWrapper .resumeArea .row.header {
-  background-color: #dafada;
-}
-.resumeWrapper .resumeArea .row .bio {
-  color: #4e4e4e;
-  font-size: 22px;
-  font-family: "Poppins";
-  text-align: justify;
-}
-.resumeWrapper .resumeArea .row .oneFifth {
-  width: 25%;
-  margin: 0;
-  padding: 0;
-  display: inline-block;
-  vertical-align: top;
-}
-.resumeWrapper .resumeArea .row .oneFifth .heroImg {
-  display: block;
-  width: 120px;
-  border-radius: 90px;
-  aspect-ratio: 1;
-  margin-left: auto;
-}
-.resumeWrapper .resumeArea .row .oneFifth .title {
-  font-family: "Poppins";
-  font-weight: bold;
-  width: 80%;
-  margin-top: 16px;
-  font-size: 16px;
-  margin-left: auto;
-}
-.resumeWrapper .resumeArea .row .oneFifth .links {
-  padding: 10px 8px;
-  margin: 0 0 24px 0;
-  width: 80%;
-  flex-direction: row;
-  justify-content: space-between;
-  vertical-align: top;
-  border: 1px solid #4e4e4e;
-  border-radius: 6px;
-  margin-left: auto;
-}
-.resumeWrapper .resumeArea .row .oneFifth .links a {
-  display: block;
-  padding: 4px 8px;
-  margin: 6px 16px 0 0;
-  color: #1e1e1e;
-  font-weight: normal;
-  font-family: "Poppins";
-  font-size: 16px;
-  width: 100%;
-}
-.resumeWrapper .resumeArea .row .oneFifth .skills {
-  padding: 10px 0;
-  margin: 0 0 24px 0;
-  width: 80%;
-  flex-direction: row;
-  justify-content: space-between;
-  vertical-align: top;
-  border: 1px solid #4e4e4e;
-  border-radius: 6px;
-  margin-left: auto;
-}
-.resumeWrapper .resumeArea .row .oneFifth .skills a, .resumeWrapper .resumeArea .row .oneFifth .skills span {
-  display: block;
-  padding: 4px 8px;
-  margin: 6px 16px 0 0;
-  color: #1e1e1e;
-  font-weight: normal;
-  font-family: "Poppins";
-  font-size: 16px;
-  width: 100%;
-}
-.resumeWrapper .resumeArea .row .fourFifth {
-  width: 75%;
-  margin: 0;
-  padding: 0 32px 0 0;
-  display: inline-block;
-  vertical-align: top;
-}
-.resumeWrapper .resumeArea .row .fourFifth .address {
-  padding: 10px 0 0 0;
-}
-.resumeWrapper .resumeArea .row .fourFifth .address a {
-  color: #4e4e4e;
-  font-size: 14px;
-  font-family: "Poppins";
-  padding: 0 20px 0 0;
-}
-.resumeWrapper .resumeArea .row .fourFifth .sectionTitle {
-  font-family: "Poppins";
-  font-weight: bold;
-  width: 100%;
-  margin-top: 16px;
-  font-size: 16px;
-}
-.resumeWrapper .resumeArea .row .fourFifth .name {
-  color: #0e0e0e;
-  font-family: bold;
-  font-size: 32px;
-  font-family: "Poppins";
-  padding: 0 0 12px 0;
-}
-.resumeWrapper .resumeArea .row .fourFifth .bio {
-  color: #4e4e4e;
-  font-size: 22px;
-  font-family: "Poppins";
-  text-align: justify;
-}
-.resumeWrapper .resumeArea .row .fourFifth .title {
-  color: #1e1e1e;
-  font-size: 22px;
-  font-family: "Poppins";
-  text-align: justify;
-}
-.resumeWrapper .resumeArea .row .fourFifth .time {
-  color: #1e1e1e;
-  font-size: 14px;
-  font-family: "Poppins";
-  text-align: justify;
-}
-.resumeWrapper .resumeArea .row .fourFifth .pointers {
-  margin: 0;
-  margin-bottom: 24px;
-  padding-left: 20px;
-}
-.resumeWrapper .resumeArea .row .fourFifth .pointers li {
-  margin: 0;
-  padding: 6px 0;
-  font-size: 18px;
-  font-family: "Poppins";
-  text-align: justify;
+  color: #fafada;
 }/*# sourceMappingURL=App.css.map */

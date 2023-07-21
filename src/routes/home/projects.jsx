@@ -4,38 +4,38 @@ import projectData from "../../api/ProjectsData.json";
 
 const Projects = () =>{
     
-    let projects = projectData;
-    
-    useEffect(()=>{
-        let slider = document.getElementById("xScroll");
-        slider.addEventListener('wheel', (e =>{
-            e.preventDefault();
-            let x = e.deltaY;
-            slider.scrollBy(x, 0);
-        }))
-    }, [])
+    const projects = projectData;
 
     return(
         <Fragment>
 
             <div id="projects">
-                <div className="wrapper columns large12 medium12 small12">
-                    <div className="flexCenter flexCenterVert">
-                        <h1 className="title">The Project Showcase</h1>
-                        <div className="projectSlides" id="xScroll">
-                            {projects.map(
-                                project => (
-                                    <div className={"itemWrapper"} key={project.title}>
-                                        <a href={project.rel} target="_blank" referrer="no-referrer">
-                                            <img className="thumbnail dlevel2" src={project.img} alt={project.title} />
-                                        </a>
-                                        <p className="projectTile">{project.title}</p>
-                                        <p className="projectTags">{project.tags}</p>
+                <p className="ta_center title text-green">The Project Showcase</p>
+                <p className="ta_center subtitle text-warm">With every project, I try to push my work to a new level while prioritizing quality first.</p>
+                <div className="project-wrapper">
+                    {projects.map(
+                        project => (
+                            <div id={project.title} key={project.title}>
+                                <div className={"item-wrapper"}>
+                                    <div className={project.class + ' thumbnail'}>
+                                        <span style={{background: `url(${project.img})`}}></span>
                                     </div>
-                                )
-                            )}
-                        </div>
-                    </div>
+                                    <div className="project-info">
+                                        <div className="top">
+                                            <p className="project-title">{project.title}</p>
+                                            <p className="project-tags">{project.stack}</p>
+                                        </div>
+                                        <div className="bottom">
+                                            <p className="project-description">{project.info}</p><br/>
+                                            <a href={project.rel} target="_blank" referrer="no-referrer">
+                                                Check out the project
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        )
+                    )}
                 </div>
             </div>
             

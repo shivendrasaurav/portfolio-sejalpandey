@@ -5,8 +5,10 @@
         "class": "itemPortrait",
         "rel": "https://fluentdesignforweb.github.io/v2/",
         "ghrel": "https://github.com/fluentdesignforweb",
-        "img": "./logos/fdweb.png",
-        "tags": "tool - development - design"
+        "img": "./projects/fdweb.png",
+        "tags": "tool - development - design",
+        "stack": "react - css - js",
+        "info": "A modern CSS based on Microsoft's Fluent Design Language. Fluent Design for Web is a free, cross-platform CSS framework that is simple to use and extremely adaptable. It enables developers to create more accessible and engaging user interfaces for users."
     },
     {
         "title": "The Code Drop",
@@ -14,17 +16,21 @@
         "class": "itemPortrait",
         "rel": "https://www.youtube.com/c/thecodedrop",
         "ghrel": "https://github.com/shivendrasaurav/The-Code-Drop-Box-React",
-        "img": "./logos/tcdb.png",
-        "tags": "content - eSports"
+        "img": "./projects/thecodedrop.png",
+        "tags": "tutorials",
+        "stack": "youtube",
+        "info": "The Code Drop is a YouTube channel I worked on during the pandemic era producing one video every week. Focusing on making easy to undertand videos related to web development. I worked on all aspects of the videos wether is was writing, recording and editing."
     },
     {
         "title": "PokeDex",
         "type": "Flutter App",
-        "class": "itemPortrait",
+        "class": "itemLogo",
         "rel": "https://github.com/fluentdesignweb/PokeDex/releases/tag/v0.0.1-alpha",
         "ghrel": "https://github.com/fluentdesignweb/PokeDex",
         "img": "./logos/pokeball.png",
-        "tags": "android app - development - design"
+        "tags": "android app - development - design",
+        "stack": "flutter - apis",
+        "info": "Due to copyright issues the app can't be published, but you can still download the apk from the github page of the app. You can find all 806 Pokemons and their details like movesets, evolutionary lines and basic stats. Have fun catching them All !!"
     },
     {
         "title": "Rukku's Coffee",
@@ -32,17 +38,21 @@
         "class": "itemPortrait",
         "rel": "https://www.rukkuscoffee.com/",
         "ghrel": "https://github.com/makeinbharat/",
-        "img": "./logos/rc.png",
-        "tags": "website - development - design"
+        "img": "./projects/rukkus.png",
+        "tags": "website - development - design",
+        "stack": "nextjs",
+        "info": "Rukku's Coffee is a coffee manufacturer based in Chikmagalur with plantations and in-house coffee processing unit. They were in requirement for a landing page to introduce the product to customers buying from online marketplaces and this is the perfect basic landing page."
     },
     {
         "title": "Sejal Pandey",
         "type": "Portfolio",
-        "class": "itemPortrait",
+        "class": "itemLandscape",
         "rel": "https://sejalpandey.vercel.app/",
         "ghrel": "https://github.com/makeinbharat/",
-        "img": "./logos/sp.png",
-        "tags": "portfolio - development - design"
+        "img": "./projects/sejalpandey.png",
+        "tags": "portfolio - development - design",
+        "stack": "qwik",
+        "info": "Sejal Pandey is a student of sociology, an activist and has written scripts for a few videos a few articles on pressing topics and completed interviews. She wanted a portfolio showcasing some of her prominent works and a website which uses bigger fonts and horizonal scrolling makes sense."
     },
     {
         "title": "Corona Rakshak",
@@ -50,8 +60,10 @@
         "class": "itemPortrait",
         "rel": "https://shivendrasaurav.github.io/corona-rakshak/",
         "ghrel": "https://github.com/shivendrasaurav/corona-rakshak",
-        "img": "./logos/cr.png",
-        "tags": "pwa - development - design"
+        "img": "./projects/corona.png",
+        "tags": "pwa - development - design",
+        "stack": "html - css - js",
+        "info": "Corona rakshak is a Progressive Web App meant to use Bluetooth to detect nearby devices to establish contact, get statistics related to covid-19 and help users to maintain social distancing."
     },
     {
         "title": "REVA Hack 2020 </> App",
@@ -59,16 +71,20 @@
         "class": "itemPortrait",
         "rel": "https://revahack.com/#/",
         "ghrel": "https://github.com/revahack",
-        "img": "./logos/rh.png",
-        "tags": "pwa - development - design"
+        "img": "./projects/revahack.png",
+        "tags": "pwa - development - design",
+        "stack": "react",
+        "info": "REVA Hack </> is among one of the biggest Hackathons organised by REVA University. I was part of the organising team for the first ever REVA Hack </> and responsible for spearheading all different areas wether it was curating, website, sponsorship and promotions."
     },
     {
         "title": "Hisab Kitab",
         "type": "Android App",
-        "class": "itemPortrait",
+        "class": "itemLogo",
         "rel": "https://github.com/makeinbharat/hisabkitab_native",
         "ghrel": "https://github.com/makeinbharat/",
         "img": "./logos/hk.png",
-        "tags": "android app - development - design"
+        "tags": "android app - development - design",
+        "stack": "react native - express - postgresql",
+        "info": "This app is in active development and so the GitHub repository of the app has been added"
     }
 ]

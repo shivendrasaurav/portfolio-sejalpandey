@@ -3,47 +3,28 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const About = () =>{
 
-
-
     return(
         <Fragment>
             
             <div id="about">
-                <div className="wrapper columns large12 medium12 small12">
-                    <div className="flexCenter large4 medium4 small12 skillColor">
-                        <h1 className="title ta_left">I can help you with</h1>
-                        <ul className="items itemsLeft">
-                            <li>Interface Design</li>
-                            <li>User Experience</li>
-                            <li>Progressive Web Apps</li>
-                            <li>Single Page Applications</li>
-                            <li>Android Apps</li>
-                            <li>Basic SEO</li>
-                        </ul>
+                <p className="ta_center title text-green">About Me</p>
+                <p className="ta_center subtitle text-warm">I do magic with my hands, keyboard and ide</p>
+                <p className="ta_center paragraph text-white">
+                    I am a Full Stack Developer who knows how to express a great product using a unique design language, animations and craft which makes every experience a rich and unique story for the user.<br/>
+                    From canvas to code, I orchestrate and create pwas, static websites, spas and api endpoints to complete end to end functionality of every website.
+                </p>
+                <div className="stats">
+                    <div className="stat text-warm">
+                        <p className="num">8</p>
+                        <p className="info">projects completed</p>
                     </div>
-                    
-                    <div className="flexCenter large4 medium4 small12 statColor">
-                        <h1 className="title ta_center">STATSMASTER</h1>
-                        <ul className="items itemsCenter">
-                            <li>Projects in Production: 8</li>
-                            <li>All Time Projects: 21</li>
-                            <li>GitHub Repositories : 85</li>
-                            <li>Total Pull Requests : 93</li>
-                            <li>Total Contributions : 2194</li>
-                            <li>Lines of Code : 200K+</li>
-                        </ul>
+                    <div className="stat text-green">
+                        <p className="num">2200+</p>
+                        <p className="info">open source contributions</p>
                     </div>
-
-                    <div className="flexCenter large4 medium4 small12 skillColor">
-                        <h1 className="title ta_right">I can help you with</h1>
-                        <ul className="items itemsRight">
-                            <li>Interface Design</li>
-                            <li>User Experience</li>
-                            <li>Progressive Web Apps</li>
-                            <li>Single Page Applications</li>
-                            <li>Android Apps</li>
-                            <li>Basic SEO</li>
-                        </ul>
+                    <div className="stat text-warm">
+                        <p className="num">2</p>
+                        <p className="info">years experience</p>
                     </div>
                 </div>
             </div>

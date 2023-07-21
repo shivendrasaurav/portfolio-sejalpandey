@@ -1,17 +1,157 @@
-import React, {Fragment, useEffect, useState} from "react";
+import React, {Fragment, useEffect} from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import Hero from "./hero";
-import Stacks from "./stack";
+import About from "./about";
+import Skills from "./skills";
 import Projects from "./projects";
 import Contact from "./contact";
 
 const Portfolio = () =>{
 
+    const animate = (entries, observer) =>{
+        entries.forEach(entry => {
+            let box = entry.target;
+            let visiblePercent = `${Math.floor(entry.intersectionRatio * 100)}`;
+            box.className = `opc${visiblePercent}`
+        });
+    }
+
+    const animateLeftToRight = (entries, observer) =>{
+        entries.forEach(entry => {
+            let box = entry.target;
+            let visiblePercent = `${Math.floor(entry.intersectionRatio * 100)}`;
+            box.className = `ltr${visiblePercent}`
+        });
+    }
+
+    const animateRightToLeft = (entries, observer) =>{
+        entries.forEach(entry => {
+            let box = entry.target;
+            let visiblePercent = `${Math.floor(entry.intersectionRatio * 100)}`;
+            box.className = `rtl${visiblePercent}`
+        });
+    }
+
+    const createObservers = () =>{
+        let Observer;
+
+        let options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: []
+        }
+
+        Observer = new IntersectionObserver(animate, options)
+        Observer.observe(document.getElementById('skills'))
+        Observer.observe(document.getElementById('about'))
+        //Observer.observe(document.getElementById('projects'))
+        Observer.observe(document.getElementById('contact'))
+    }
+
+    const createEvenProjectObservers = () =>{
+        let Observer;
+
+        let options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: []
+        }
+
+        Observer = new IntersectionObserver(animateRightToLeft, options)
+        Observer.observe(document.getElementById('The Code Drop'))
+        Observer.observe(document.getElementById("Rukku's Coffee"))
+        Observer.observe(document.getElementById('Corona Rakshak'))
+        Observer.observe(document.getElementById('Hisab Kitab'))
+    }
+
+    const createOddProjectObservers = () =>{
+        let Observer;
+
+        let options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: []
+        }
+
+        Observer = new IntersectionObserver(animateLeftToRight, options)
+        Observer.observe(document.getElementById('Fluent Design For Web'))
+        Observer.observe(document.getElementById('PokeDex'))
+        Observer.observe(document.getElementById('Sejal Pandey'))
+        Observer.observe(document.getElementById('REVA Hack 2020 </> App'))
+    }
+
+    const generateDynamicStyles = () => {
+        let dynamicOpacityCSS = '';
+        let dynamicLTRCSS = '';
+        let dynamicRTLCSS = '';
+
+        for (let x = 0; x <= 100; x++) {
+          let opacity = x / 10;
+          let scale = x / 1000;
+          let translateY = 100 - x;
+          let opcClassName = `opc${x}`;
+          let ltrClassName = `ltr${x}`;
+          let rtlClassName = `rtl${x}`;
+          let delay = 100;
+
+          if(x>70){
+            translateY = 0;
+            delay = 200
+          }
+  
+          dynamicOpacityCSS += `
+            .${opcClassName} {
+              opacity: ${opacity};
+              transform: translateY(${translateY}px) scale(${0.9+scale});
+              transition: ${delay}ms;
+            }
+          `;
+  
+          dynamicLTRCSS += `
+            .${ltrClassName} {
+              opacity: ${opacity};
+              transform: translateX(${translateY}vh) scale(${0.9+scale});
+              transition: ${delay}ms;
+              height: 120vh;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+          `;
+  
+          dynamicRTLCSS += `
+            .${rtlClassName} {
+              opacity: ${opacity}ms;
+              transform: translateX(-${translateY}vh) scale(${0.9+scale});
+              transition: ${delay};
+              height: 120vh;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+          `;
+        }
+        document.getElementById('generatedOpacityClasses').innerHTML = dynamicOpacityCSS;
+        document.getElementById('generatedLTRClasses').innerHTML = dynamicLTRCSS;
+        document.getElementById('generatedRTLClasses').innerHTML = dynamicRTLCSS;
+    }
+
+    window.onscroll = () =>{
+        createObservers();
+        createEvenProjectObservers();
+        createOddProjectObservers();
+    }
+
+    useEffect(()=>{
+        generateDynamicStyles();
+    }, [])
+
     return(
         <Fragment>
 
             <Hero/>
-            <Stacks />
+            <About/>
+            <Skills/>
             <Projects />
             <Contact />
 
