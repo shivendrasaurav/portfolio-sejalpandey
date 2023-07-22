@@ -19,16 +19,21 @@ const Portfolio = () =>{
     const animateLeftToRight = (entries, observer) =>{
         entries.forEach(entry => {
             let box = entry.target;
-            let visiblePercent = `${Math.floor(entry.intersectionRatio * 100)}`;
+            let visiblePercent = `${100-Math.floor(entry.boundingClientRect.y/10)}`;
             box.className = `ltr${visiblePercent}`
+            if(visiblePercent>100)
+                box.className = `ltr100`
+
         });
     }
 
     const animateRightToLeft = (entries, observer) =>{
         entries.forEach(entry => {
             let box = entry.target;
-            let visiblePercent = `${Math.floor(entry.intersectionRatio * 100)}`;
+            let visiblePercent = `${100-Math.floor(entry.boundingClientRect.y/10)}`;
             box.className = `rtl${visiblePercent}`
+            if(visiblePercent>100)
+                box.className = `rtl100`
         });
     }
 
@@ -93,16 +98,11 @@ const Portfolio = () =>{
           let ltrClassName = `ltr${x}`;
           let rtlClassName = `rtl${x}`;
           let delay = 100;
-
-          if(x>70){
-            translateY = 0;
-            delay = 200
-          }
   
           dynamicOpacityCSS += `
             .${opcClassName} {
               opacity: ${opacity};
-              transform: translateY(${translateY}px) scale(${0.9+scale});
+              transform: translateY(${translateY}px) scale(${0.92+scale});
               transition: ${delay}ms;
             }
           `;
@@ -110,9 +110,9 @@ const Portfolio = () =>{
           dynamicLTRCSS += `
             .${ltrClassName} {
               opacity: ${opacity};
-              transform: translateX(${translateY}vh) scale(${0.9+scale});
+              transform: translateX(${translateY}vh) scale(${0.92+scale});
               transition: ${delay}ms;
-              height: 120vh;
+              height: 100vh;
               display: flex;
               justify-content: center;
               align-items: center;
@@ -121,10 +121,10 @@ const Portfolio = () =>{
   
           dynamicRTLCSS += `
             .${rtlClassName} {
-              opacity: ${opacity}ms;
-              transform: translateX(-${translateY}vh) scale(${0.9+scale});
-              transition: ${delay};
-              height: 120vh;
+              opacity: ${opacity};
+              transform: translateX(-${translateY}vh) scale(${0.92+scale});
+              transition: ${delay}ms;
+              height: 100vh;
               display: flex;
               justify-content: center;
               align-items: center;

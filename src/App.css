@@ -24,33 +24,51 @@
   justify-content: start;
   width: 100%;
   height: 100vh;
-  padding: 12%;
   background: url("./assets/hero.png");
   background-size: cover;
+  background-position: center;
 }
-#hero .hero-filter {
-  left: 0;
-  top: 0;
+#hero #fragment-container {
   position: absolute;
   width: 100%;
-  height: 100%;
-  z-index: 1;
+  height: 100vh;
+  z-index: 2;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   overflow: hidden;
-  -webkit-backdrop-filter: grayscale(100%);
-          backdrop-filter: grayscale(100%);
+}
+#hero #fragment-container .fragment {
+  display: block;
+  width: 10%;
+  aspect-ratio: 1;
+  transition: 800ms;
+  transition-delay: 200ms;
+}
+#hero #fragment-container .fragment:hover {
+  -webkit-backdrop-filter: saturate(60%) invert(20%);
+          backdrop-filter: saturate(60%) invert(20%);
+  transition: 0ms;
+  transition-delay: 0ms;
 }
 #hero .hero-text {
-  width: 50vw;
-  z-index: 2;
+  position: relative;
+  height: 100vh;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  margin: auto;
+  width: 80vw;
 }
 #hero .hero-text .subtitle {
-  font-size: 2.4rem;
+  font-size: 2vw;
   font-family: "Merriweather";
 }
 #hero .hero-text .title {
-  font-size: 6.4rem;
+  font-size: 6.4vw;
   font-family: "Montserrat";
   font-weight: bold;
   margin: 3vh 0;
@@ -58,7 +76,7 @@
 
 #about {
   background-color: #060606;
-  height: 90vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -66,27 +84,32 @@
 }
 #about .title {
   font-size: 16px;
-  width: 50vw;
+  min-width: 50vw;
+  max-width: 80vw;
   font-family: "Fira Sans";
 }
 #about .subtitle {
   font-size: 32px;
-  width: 50vw;
+  min-width: 50vw;
+  max-width: 80vw;
   font-family: "Merriweather";
   margin-top: 2vh;
   margin-bottom: 2vh;
 }
 #about .paragraph {
   font-size: 18px;
-  width: 50vw;
+  min-width: 50vw;
+  max-width: 80vw;
   font-family: "Montserrat";
   margin: 2vh 0;
 }
 #about .stats {
   display: flex;
-  width: 50vw;
+  min-width: 50vw;
+  max-width: 80vw;
   justify-content: space-around;
   margin-top: 2vh;
+  flex-wrap: wrap;
 }
 #about .stats .stat {
   text-align: center;
@@ -103,7 +126,7 @@
 
 #skills {
   background-color: #060606;
-  height: 90vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -111,12 +134,14 @@
 }
 #skills .title {
   font-size: 16px;
-  width: 50vw;
+  min-width: 50vw;
+  max-width: 80vw;
   font-family: "Fira Sans";
 }
 #skills .subtitle {
   font-size: 32px;
-  width: 50vw;
+  min-width: 50vw;
+  max-width: 80vw;
   font-family: "Merriweather";
   margin-top: 2vh;
   margin-bottom: 2vh;
@@ -127,16 +152,18 @@
   margin-top: 2vh;
   border: 2px solid #00FF94;
   background-color: #0e0e0e;
+  max-width: 80vw;
+  flex-wrap: wrap;
 }
 #skills .tools:nth-child(1) {
-  width: 30vw;
+  min-width: 30vw;
   margin-top: 6vh;
 }
 #skills .tools:nth-child(1) {
-  width: 40vw;
+  min-width: 40vw;
 }
 #skills .tools:nth-child(1) {
-  width: 50vw;
+  min-width: 50vw;
 }
 #skills .tools .tool {
   text-align: center;
@@ -153,6 +180,7 @@
 }
 
 #projects {
+  margin-top: 10vh;
   background-color: #060606;
   min-height: 90vh;
   display: flex;
@@ -162,12 +190,14 @@
 }
 #projects .title {
   font-size: 16px;
-  width: 50vw;
+  min-width: 50vw;
+  max-width: 80vw;
   font-family: "Fira Sans";
 }
 #projects .subtitle {
   font-size: 32px;
-  width: 50vw;
+  min-width: 50vw;
+  max-width: 80vw;
   font-family: "Merriweather";
   margin-top: 2vh;
   margin-bottom: 5vh;
@@ -176,7 +206,8 @@
   height: auto;
 }
 #projects .project-wrapper .item-wrapper {
-  width: 65vw;
+  min-width: 65vw;
+  max-width: 80vw;
   height: 70vh;
   margin: 1vh 0 3vh 0;
 }
@@ -249,12 +280,14 @@
 }
 #contact .title {
   font-size: 16px;
-  width: 50vw;
+  min-width: 50vw;
+  max-width: 80vw;
   font-family: "Fira Sans";
 }
 #contact .subtitle {
   font-size: 32px;
-  width: 50vw;
+  min-width: 50vw;
+  max-width: 80vw;
   font-family: "Merriweather";
   margin-top: 2vh;
   margin-bottom: 5vh;

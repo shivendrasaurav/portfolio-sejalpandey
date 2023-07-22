@@ -1,6 +1,40 @@
-.testWrapper {
-  display: block;
-  width: 100vw;
+.testWrapper .data {
+  position: relative;
+  width: 100%;
   height: 100vh;
-  background-color: red;
+  background: url("/test.png");
+  background-size: cover;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.testWrapper #fragment-container {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  transform: translateY(-100%);
+  background: transparent;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.testWrapper #fragment-container .fragment {
+  display: block;
+  width: 10%;
+  aspect-ratio: 1;
+  border: 1px solid blue;
+  -webkit-backdrop-filter: grayscale(100%);
+          backdrop-filter: grayscale(100%);
+  transition: 800ms;
+  transition-delay: 200ms;
+}
+.testWrapper #fragment-container .fragment:hover {
+  -webkit-backdrop-filter: none;
+          backdrop-filter: none;
+  transition: 0ms;
+  transition-delay: 0ms;
 }/*# sourceMappingURL=resume.css.map */
