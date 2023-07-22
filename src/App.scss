@@ -24,6 +24,10 @@
     background: url('./assets/hero.png');
     background-size: cover;
     background-position: center;
+
+    &:hover~#cursor{
+        display: none;
+    }
     
 
     #fragment-container{
@@ -212,8 +216,7 @@
         height: auto;
 
         .item-wrapper{
-            min-width: 65vw;
-            max-width: 80vw;
+            width: 80vw;
             height: 70vh;
             margin: 1vh 0 3vh 0;
 
@@ -280,7 +283,7 @@
                     &:hover{
                         background-color: #00aeff;
                         color: #fafada;
-                    }
+                    }       
                 }
             }
         }

@@ -5,6 +5,7 @@
   scroll-snap-type: none;
   scroll-snap-align: none;
   box-sizing: border-box;
+  cursor: none;
 }
 
 ::-webkit-scrollbar{
@@ -20,4 +21,16 @@
   transition: 400ms;
   background-color: #000000;
   overflow: hidden;
+}
+
+#cursor{
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: #fafadaaa;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: 200ms;
+  pointer-events: none;
 }

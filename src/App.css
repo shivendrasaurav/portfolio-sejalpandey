@@ -28,6 +28,9 @@
   background-size: cover;
   background-position: center;
 }
+#hero:hover ~ #cursor {
+  display: none;
+}
 #hero #fragment-container {
   position: absolute;
   width: 100%;
@@ -206,8 +209,7 @@
   height: auto;
 }
 #projects .project-wrapper .item-wrapper {
-  min-width: 65vw;
-  max-width: 80vw;
+  width: 80vw;
   height: 70vh;
   margin: 1vh 0 3vh 0;
 }

@@ -136,10 +136,18 @@ const Portfolio = () =>{
         document.getElementById('generatedRTLClasses').innerHTML = dynamicRTLCSS;
     }
 
-    window.onscroll = () =>{
+    window.onscroll = async () =>{
         createObservers();
         createEvenProjectObservers();
         createOddProjectObservers();
+    }
+
+    window.onmousemove = async (e) =>{
+        console.log(e.y)
+        const cursor = document.getElementById('cursor');
+        cursor.style.position = 'fixed';
+        cursor.style.top = e.y + 'px';
+        cursor.style.left = e.x + 'px';
     }
 
     useEffect(()=>{
@@ -160,6 +168,7 @@ const Portfolio = () =>{
                     <source src="./assets/bgm.mp3" type="audio/mpeg" />
                 </video>
             </div>
+            <span id='cursor'></span>
 
         </Fragment>
     );
