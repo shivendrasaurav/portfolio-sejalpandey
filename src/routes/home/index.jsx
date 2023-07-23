@@ -149,16 +149,6 @@ const Portfolio = () =>{
         cursor.style.left = e.x + 'px';
     }
 
-    window.onload = () =>{
-        console.log('lol')
-        let loadId = setInterval(()=>{
-            load();
-            if(document.querySelectorAll('#loading-container')[0].style.display == 'none'){
-                clearInterval(loadId)
-            }
-        }, 200)
-    }
-
     const load = () =>{
         const bar = document.querySelectorAll('.progress')[0];
         
@@ -182,7 +172,13 @@ const Portfolio = () =>{
     }
 
     useEffect(()=>{
-        generateDynamicStyles();
+        generateDynamicStyles();     
+        let loadId = setInterval(()=>{
+            load();
+            if(document.querySelectorAll('#loading-container')[0].style.display == 'none'){
+                clearInterval(loadId)
+            }
+        }, 200)
     }, [])
 
     return(
@@ -195,7 +191,7 @@ const Portfolio = () =>{
             <Contact />
 
             <div className="bgmPlayer" style={{display: 'none'}}>
-                <video controls={true} autoPlay={false} name="media" id="bgmNoir" loop={true}>
+                <video controls={true} autoPlay={true} name="media" id="bgmNoir" loop={false}>
                     <source src="./assets/bgm.mp3" type="audio/mpeg" />
                 </video>
             </div>
