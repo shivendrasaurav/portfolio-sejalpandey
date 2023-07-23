@@ -143,11 +143,41 @@ const Portfolio = () =>{
     }
 
     window.onmousemove = async (e) =>{
-        console.log(e.y)
         const cursor = document.getElementById('cursor');
         cursor.style.position = 'fixed';
         cursor.style.top = e.y + 'px';
         cursor.style.left = e.x + 'px';
+    }
+
+    window.onload = () =>{        
+        let loadId = setInterval(()=>{
+            load();
+            if(document.querySelectorAll('#loading-container')[0].style.display == 'none'){
+                clearInterval(loadId)
+            }
+        }, 200)
+    }
+
+    const load = () =>{
+        const bar = document.querySelectorAll('.progress')[0];
+        
+        const measureName = 'pageLoadTime';
+
+        if (!window.performance.getEntriesByName(measureName).length) {
+        window.performance.measure(measureName, { start: 0, end: 0 });
+        }
+
+        const measures = window.performance.getEntriesByName(measureName);
+        const total = measures[0].duration;
+        const current = new Date() - window.performance.timeOrigin;
+        const percentage = Math.min((current / total) * 100, 100);
+        bar.classList.add('per' + percentage)
+
+        if (percentage === 100) {
+            setTimeout(()=>{
+                const bar = document.querySelectorAll('#loading-container')[0].style.display = 'none';
+            }, 1000);
+        }
     }
 
     useEffect(()=>{
@@ -169,6 +199,11 @@ const Portfolio = () =>{
                 </video>
             </div>
             <span id='cursor'></span>
+            <div id="loading-container">
+                <div className="loader">
+                    <div className="progress"></div>
+                </div>
+            </div>
 
         </Fragment>
     );
