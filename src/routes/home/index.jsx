@@ -149,7 +149,8 @@ const Portfolio = () =>{
         cursor.style.left = e.x + 'px';
     }
 
-    window.onload = () =>{        
+    window.onload = () =>{
+        console.log('lol')
         let loadId = setInterval(()=>{
             load();
             if(document.querySelectorAll('#loading-container')[0].style.display == 'none'){
