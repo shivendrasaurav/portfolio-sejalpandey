@@ -20,10 +20,10 @@ const About = () =>{
                     </div>
                     <div className="stat text-green">
                         <p className="num">2200+</p>
-                        <p className="info">open source contributions</p>
+                        <p className="info">open source commits</p>
                     </div>
                     <div className="stat text-warm">
-                        <p className="num">2</p>
+                        <p className="num">2.6</p>
                         <p className="info">years experience</p>
                     </div>
                 </div>

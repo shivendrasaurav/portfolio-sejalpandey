@@ -22,6 +22,17 @@
         "info": "The Code Drop is a YouTube channel I worked on during the pandemic era producing one video every week. Focusing on making easy to undertand videos related to web development. I worked on all aspects of the videos wether is was writing, recording and editing."
     },
     {
+        "title": "LunaSyz",
+        "type": "Android App",
+        "class": "itemLogo",
+        "rel": "https://play.google.com/store/apps/details?id=com.lunasyz.rnui",
+        "ghrel": "https://github.com/shivendrasaurav/lunasyz",
+        "img": "./projects/luna.png",
+        "tags": "android app - development - design",
+        "stack": "react native - express",
+        "info": "A celestial tracking app with lunar phase detection, astro photo of the day and lunar cycle calender."
+    },
+    {
         "title": "PokeDex",
         "type": "Flutter App",
         "class": "itemLogo",
@@ -75,16 +86,5 @@
         "tags": "pwa - development - design",
         "stack": "react",
         "info": "REVA Hack </> is among one of the biggest Hackathons organised by REVA University. I was part of the organising team for the first ever REVA Hack </> and responsible for spearheading all different areas wether it was curating, website, sponsorship and promotions."
-    },
-    {
-        "title": "Hisab Kitab",
-        "type": "Android App",
-        "class": "itemLogo",
-        "rel": "https://github.com/makeinbharat/hisabkitab_native",
-        "ghrel": "https://github.com/makeinbharat/",
-        "img": "./logos/hk.png",
-        "tags": "android app - development - design",
-        "stack": "react native - express - postgresql",
-        "info": "This app is in active development and so the GitHub repository of the app has been added"
     }
 ]

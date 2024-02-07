@@ -64,9 +64,9 @@ const Portfolio = () =>{
 
         Observer = new IntersectionObserver(animateRightToLeft, options)
         Observer.observe(document.getElementById('The Code Drop'))
-        Observer.observe(document.getElementById("Rukku's Coffee"))
-        Observer.observe(document.getElementById('Corona Rakshak'))
-        Observer.observe(document.getElementById('Hisab Kitab'))
+        Observer.observe(document.getElementById('PokeDex'))
+        Observer.observe(document.getElementById('Sejal Pandey'))
+        Observer.observe(document.getElementById('REVA Hack 2020 </> App'))
     }
 
     const createOddProjectObservers = () =>{
@@ -80,9 +80,9 @@ const Portfolio = () =>{
 
         Observer = new IntersectionObserver(animateLeftToRight, options)
         Observer.observe(document.getElementById('Fluent Design For Web'))
-        Observer.observe(document.getElementById('PokeDex'))
-        Observer.observe(document.getElementById('Sejal Pandey'))
-        Observer.observe(document.getElementById('REVA Hack 2020 </> App'))
+        Observer.observe(document.getElementById('LunaSyz'))
+        Observer.observe(document.getElementById("Rukku's Coffee"))
+        Observer.observe(document.getElementById('Corona Rakshak'))
     }
 
     const generateDynamicStyles = () => {
