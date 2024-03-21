@@ -1,5 +1,16 @@
 [
     {
+        "title": "Invrz Keyboard",
+        "type": "Windows Application",
+        "class": "itemPortrait",
+        "rel": "https://keyboard.invrz.com/",
+        "ghrel": "https://github.com/shivendrasaurav/keyboard",
+        "img": "./projects/keyboard.png",
+        "tags": "tool - development - design",
+        "stack": "electron - python - react",
+        "info": "Invrz Keyboard is a state of the art cross platform app designed to help you discover typing patterns, vocabulary, and performance right before your own eyes."
+    },
+    {
         "title": "Fluent Design For Web",
         "type": "CSS Framework",
         "class": "itemPortrait",

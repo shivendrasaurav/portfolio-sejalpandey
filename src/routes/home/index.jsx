@@ -63,6 +63,7 @@ const Portfolio = () =>{
         }
 
         Observer = new IntersectionObserver(animateRightToLeft, options)
+        Observer.observe(document.getElementById('Invrz Keyboard'))
         Observer.observe(document.getElementById('The Code Drop'))
         Observer.observe(document.getElementById('PokeDex'))
         Observer.observe(document.getElementById('Sejal Pandey'))
