@@ -17,7 +17,7 @@ const Contact = () =>{
                     </p>
                     <div className="buttons">
                         <a className="mailBtn" href="mailto:shivendrasaurav@gmail.com" target="_blank" referrer="no-referrer">Drop an Email</a>
-                        <a id="resumeBtn" className="mailBtn" href="https://docs.google.com/document/d/1XF_vzEj6PefHcN_6_kNmrm81oi9NNyAhk45xBVsbNK8/edit?usp=sharing" target="_blank" referrer="no-referrer" download>Download CV</a>
+                        <a id="resumeBtn" className="mailBtn" href="https://docs.google.com/document/d/1CzQTMW5k6CpvzPTSyxjlXEr_-vrwjSpUWgncHYoojiw/edit?usp=sharing" target="_blank" referrer="no-referrer" download>Download CV</a>
                     </div>
                     <p className="subtitle ta_center text-warm">
                         Know me better through my social media handles
